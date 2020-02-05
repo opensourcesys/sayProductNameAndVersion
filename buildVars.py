@@ -1,3 +1,5 @@
+# -*- coding: UTF-8 -*-
+
 # Build customizations
 # Change this file instead of sconstruct, whenever possible.
 
@@ -7,20 +9,28 @@ _ = lambda x : x
 # Add-on information variables
 addon_info = {
 # add-on Name
-	"addon-name" : "sayProductNameAndVersion",
+	"addon_name" : "sayProductNameAndVersion",
 	# Add-on description
-	# TRANSLATORS: Summary for this add-on to be shown on installation and add-on informaiton.
-	"addon-summary" : _("Say Product Name and Version"),
+	# Translators: Summary for this add-on to be shown on installation and add-on information.
+	"addon_summary" : _("Say Product Name and Version"),
 	# Add-on description
-	# Translators: Long description to be shown for this add-on on installation and add-on information
-	"addon-description" : _("""Say product name and version of the application which ownes the focused window.
+	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+	"addon_description" : _("""Say product name and version of the application which ownes the focused window.
 Shortcut: Shift+NVDA+V"""),
 	# version
-	"addon-version" : "1.0.1",
+	"addon_version" : "2020.02",
 	# Author(s)
-	"addon-author" : "Patrick ZAJDA <patrick@zajda.fr>",
+	"addon_author" : "Patrick ZAJDA <patrick@zajda.fr>",
 # URL for the add-on documentation support
-"addon-url" : None
+"addon_url" : None,
+	# Documentation file name
+	"addon_docFileName" : "readme.html",
+	# Minimum NVDA version supported (e.g. "2018.3.0", minor version is optional)
+	"addon_minimumNVDAVersion" : "2017.3",
+	# Last NVDA version supported/tested (e.g. "2018.4.0", ideally more recent than minimum version)
+	"addon_lastTestedNVDAVersion" : "2019.3",
+	# Add-on update channel (default is None, denoting stable releases, and for development releases, use "dev"; do not change unless you know what you are doing)
+	"addon_updateChannel" : None,
 }
 
 import os.path
