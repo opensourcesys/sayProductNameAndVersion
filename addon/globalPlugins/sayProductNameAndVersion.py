@@ -23,16 +23,16 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		try:
 			productName = focus.appModule.productName
 		except Exception:
-			productName = None
+			productName = ""
 		try:
 			productVersion = focus.appModule.productVersion
 		except Exception:
-			productVersion = None
+			productVersion = ""
 
-		if productName is None or productName=="":
+		if productName=="":
 			# Translators: This is used when the name of the focused application cannot be found.
 			productName = _("Application")
-		if productName is not None and productVersion is not None and productName != "" and productVersion != "":
+		if productName != "" and productVersion != "":
 			isSameScript =scriptHandler.getLastScriptRepeatCount()
 			if isSameScript==0:
 				# Translators: This is the message which will be spoken or copied to the clipboard. {name} is the app name, {version} its the version.
