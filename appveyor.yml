@@ -33,3 +33,28 @@ deploy:
   artifact: addon
   on:
     appveyor_repo_tag: true
+
+- provider: FTP
+  protocol: ftps
+  host:
+    secure: zlOavGuP/Soxg/BWn/tnCA==
+  username:
+    secure: KRV5ary404pbCKCCRnNKMQ==
+  password:
+    secure: HpUOJkphDWfc8nLKU/5Xmw==
+  folder: /web/nvda
+  artifact: addon
+  on:
+    appveyor_repo_tag: true
+
+- provider: FTP
+  protocol: ftps
+  host:
+    secure: zlOavGuP/Soxg/BWn/tnCA==
+  username:
+    secure: KRV5ary404pbCKCCRnNKMQ==
+  password:
+    secure: HpUOJkphDWfc8nLKU/5Xmw==
+  folder: /web/nvda/addons-snapshots
+  artifact: addon
+
