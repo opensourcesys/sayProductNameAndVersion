@@ -57,4 +57,6 @@ deploy:
     secure: HpUOJkphDWfc8nLKU/5Xmw==
   folder: /web/nvda/addons-snapshots
   artifact: addon
+on:
+    appveyor_repo_tag: false
 
