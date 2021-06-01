@@ -1,7 +1,7 @@
 [[!meta title="Say Product Name and Version"]]
 
 * Author: Patrick ZAJDA <patrick@zajda.fr>
-* Download: [version 2020.02][downloadLink]
+* Download: [see releases][downloadLink]
 
 This plugin add a shortcut to announce product name and version of the foreground application, or copy these informations to the clipboard.
 
@@ -23,4 +23,4 @@ This plugin add a shortcut to announce product name and version of the foregroun
 
 * Initial Release
 
-[downloadLink]: http://patrick.zajda.fr/nvda/sayProductNameAndVersion.nvda-addon
+[downloadLink]: https://github.com/Nardol/sayProductNameAndVersion/releases
