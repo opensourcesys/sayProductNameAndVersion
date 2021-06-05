@@ -23,4 +23,4 @@ This plugin add a shortcut to announce product name and version of the foregroun
 
 * Initial Release
 
-[downloadLink]: https://github.com/Nardol/sayProductNameAndVersion/releases
+[downloadLink]: https://github.com/Nardol/sayProductNameAndVersion/releases/latest
