@@ -36,6 +36,8 @@ jobs:
       shell: python 
     - name: Build
       run: scons
+    - name: Build pot
+      run: scons pot
     - name: Automatic release
       uses: marvinpinto/action-automatic-releases@latest
       with:
@@ -45,6 +47,7 @@ jobs:
         title: Development Build
         files: |
           *.nvda-addon
+          *.pot
     - name: copy file via ssh
       uses: appleboy/scp-action@master
       with:
@@ -53,5 +56,5 @@ jobs:
         key: ${{ secrets.SSH2KEY }}
         passphrase: ${{ secrets.SSHPASSPHRASE }}
         port: ${{ secrets.SSHPORT }}
-        source: "*.nvda-addon"
+        source: "*.nvda-addon,*.pot"
         target: "/web/nvda/addons-snapshots"
