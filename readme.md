@@ -8,6 +8,10 @@ This plugin add a shortcut to announce product name and version of the foregroun
 * Shortcut: NVDA+Shift+V
 * Press it twice to copy product name and version to the clipboard.
 
+## Changes for 2021.06 ##
+
+* Add Croatian translation thanks to Tarik Hadžirović and Goran Parać
+
 ## Changes for 2020.02 ##
 
 * Python 3 compatibility

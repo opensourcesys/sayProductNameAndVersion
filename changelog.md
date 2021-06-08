@@ -1,4 +1,5 @@
-## Changes for 2021.05 ##
+## Changes for 2021.06 ##
 
-* Specify NVDA 2021.1 compatibility
+* Add Croatian translation thanks to Tarik Hadžirović and Goran Parać
+
 
