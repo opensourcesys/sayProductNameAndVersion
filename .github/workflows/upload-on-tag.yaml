@@ -20,19 +20,8 @@ jobs:
         pip install scons markdown
         sudo apt update
         sudo apt install gettext
-    - name: Add add-on version
-      run: |
-        import re
-        with open("buildVars.py", 'r+', encoding='utf-8') as f:
-          text = f.read()
-          version = "${{ github.ref }}".split("/")[-1]
-          text = re.sub("\"addon_version\" : ,", "\"addon_version\" : \"%s\",", text) % version
-          f.seek(0)
-          f.write(text)
-          f.truncate()
-      shell: python 
     - name: Build add-on
-      run: scons
+      run: scons version=`echo ${{ github.ref }} | cut -d / -f2`
     - name: Calculate sha256
       run: sha256sum *.nvda-addon >> changelog.md
     - name: Release
