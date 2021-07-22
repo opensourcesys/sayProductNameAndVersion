@@ -21,7 +21,7 @@ jobs:
         sudo apt update
         sudo apt install gettext
     - name: Build add-on
-      run: scons version=`echo ${{ github.ref }} |  |rev |cut -d "/" -f1 |rev`
+      run: scons version=`echo ${{ github.ref }}|rev|cut -d/ -f1|rev`
     - name: Calculate sha256
       run: sha256sum *.nvda-addon >> changelog.md
     - name: Release
