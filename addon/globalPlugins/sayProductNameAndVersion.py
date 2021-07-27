@@ -58,8 +58,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Documentation
 	# Translators: Input help mode message for say product name and version command.
 	script_sayProductNameAndVersion.__doc__ = _(
-		"Announce the version of the executable of the focused window "
-		"or copy it to the clipboard if pressed twice"
+		"Say product name and version of the application which ownes the focused window. "
+		"If pressed twice, copy these information to the clipboard"
 	)
 
 	__gestures = {
