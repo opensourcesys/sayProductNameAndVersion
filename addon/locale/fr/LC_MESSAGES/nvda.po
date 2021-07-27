@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sayProductNameAndVersion\n"
-"Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
-"POT-Creation-Date: 2012-12-06 16:30+0100\n"
-"PO-Revision-Date: 2021-07-22 11:09+0200\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2021-07-27 17:53+0200\n"
+"PO-Revision-Date: 2021-07-27 18:00+0200\n"
 "Last-Translator: Patrick ZAJDA <patrick@zajda.fr>\n"
 "Language-Team: Fr <patrick@zajda.fr>\n"
 "Language: fr_FR\n"
@@ -17,51 +17,52 @@ msgstr ""
 "X-Poedit-SearchPath-0: globalPlugins\\sayProductNameAndVersion\n"
 
 #. Translators: This is used when the name of the focused application cannot be found.
-#: addon\globalPlugins\sayProductNameAndVersion\__init__.py:50
+#: addon/globalPlugins/sayProductNameAndVersion.py:38
 msgid "Application"
 msgstr "Application"
 
-#. Translators: This is the message which will be spoken or copied to the clipboard. {name} is the app name, {version} its the version.
-#: addon\globalPlugins\sayProductNameAndVersion\__init__.py:55
-#: addon\globalPlugins\sayProductNameAndVersion\__init__.py:57
+#. Translators: This is the message which will be spoken or copied to the clipboard.
+#. {name} is the app name, {version} its the version.
+#: addon/globalPlugins/sayProductNameAndVersion.py:44
+#: addon/globalPlugins/sayProductNameAndVersion.py:46
+#, python-brace-format
 msgid "{name} version {version}"
 msgstr "{name} version {version}"
 
 #. Translators: This is the message announced when all informations has been copied.
-#: addon\globalPlugins\sayProductNameAndVersion\__init__.py:59
+#: addon/globalPlugins/sayProductNameAndVersion.py:48
+#, python-brace-format
 msgid "{name} version {version} copied to the clipboard"
 msgstr "{name} version {version} copié dans le presse-papiers"
 
 #. Translators: This is the message announced when all informations hasn't been copied.
-#: addon\globalPlugins\sayProductNameAndVersion\__init__.py:62
+#: addon/globalPlugins/sayProductNameAndVersion.py:53
 msgid "Cannot copy version informations to the clipboard."
 msgstr ""
 "Impossible de copier les informations de version dans le presse-papiers."
 
 #. Translators: this will be spoken if version informations were not available.
-#: addon\globalPlugins\sayProductNameAndVersion\__init__.py:65
+#: addon/globalPlugins/sayProductNameAndVersion.py:56
 msgid "Unable to get version info"
 msgstr "Impossible de récupérer les info de version"
 
-#. Documentation
-#. Translators : the script description.
-#: addon\globalPlugins\sayProductNameAndVersion\__init__.py:69
+#: addon/globalPlugins/sayProductNameAndVersion.py:61
 msgid ""
-"Announce the version of the executable of the focused window or copy it to "
-"the clipboard if pressed twice"
+"Say product name and version of the application which ownes the focused "
+"window. If pressed twice, copy these information to the clipboard"
 msgstr ""
-"Annonce la version de l'exécutable de la fenêtre qui a le focus ou la copie "
-"dans le presse-papiers si pressé deux fois"
+"Annonce le nom de l'application active ainsi que sa version."
+"Si appuyé deux fois, copie ces informations dans le presse-papiers"
 
 #. Add-on description
-#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on informaiton.
-#: buildVars.py:13
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+#: buildVars.py:23
 msgid "Say Product Name and Version"
 msgstr "Annoncer le nom de l'application et sa version"
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on installation and add-on information
-#: buildVars.py:16
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#: buildVars.py:26
 msgid ""
 "Say product name and version of the application which ownes the focused "
 "window.\n"
@@ -69,3 +70,4 @@ msgid ""
 msgstr ""
 "Annonce le nom de l'application active ainsi que sa version.\n"
 "Raccourci : Maj+NVDA+V"
+
