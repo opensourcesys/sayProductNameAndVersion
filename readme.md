@@ -3,7 +3,7 @@
 * Author: Patrick ZAJDA <patrick@zajda.fr>
 * Download: [see releases][downloadLink]
 
-This plugin add a shortcut to announce product name and version of the foreground application, or copy these informations to the clipboard.
+This NVDA add-on add a shortcut to announce product name and version of the foreground application, or copy these informations to the clipboard.
 
 * Shortcut: NVDA+Shift+V
 * Press it twice to copy product name and version to the clipboard.
