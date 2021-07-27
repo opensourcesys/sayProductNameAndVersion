@@ -12,7 +12,7 @@ import scriptHandler
 import globalPluginHandler
 from ui import message
 import api
-from globalCommands import SCRCAT_SPEECH
+from globalCommands import SCRCAT_TOOLS
 
 # initialize translations
 addonHandler.initTranslation()
@@ -20,7 +20,7 @@ addonHandler.initTranslation()
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# We initialize the scripts category shown on input gestures dialog
-	scriptCategory = SCRCAT_SPEECH
+	scriptCategory = SCRCAT_TOOLS
 
 	def script_sayProductNameAndVersion(self, gesture):
 		focus = api.getFocusObject()
