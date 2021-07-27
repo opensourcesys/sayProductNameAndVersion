@@ -23,7 +23,7 @@ jobs:
       with:
         python-version: 3.7
     - name: upgrade pip
-      run: pip install pip --upgrade
+      run: pip install pip --upgrade --user
     - name: Install dependencies
       run: pip install tox
     - name: Lint
