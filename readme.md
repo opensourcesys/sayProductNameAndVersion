@@ -8,9 +8,12 @@ This NVDA add-on add a shortcut to announce product name and version of the fore
 * Shortcut: NVDA+Shift+V
 * Press it twice to copy product name and version to the clipboard.
 
-## Changes for 2021.06 ##
+## Changes for 2021.07 ##
 
 * Add Croatian translation thanks to Tarik Hadžirović and Goran Parać
+* Update help message
+* Update documentation style for visualy impaired users
+* Move shortcut from Speech to tools cathegory
 
 ## Changes for 2020.02 ##
 
