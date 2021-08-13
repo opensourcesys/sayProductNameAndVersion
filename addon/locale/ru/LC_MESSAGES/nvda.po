@@ -1,0 +1,45 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: SayProductNameAndVersion\n"
+"POT-Creation-Date: 2021-08-12 07:35+0300\n"
+"PO-Revision-Date: 2021-08-12 07:35+0300\n"
+"Last-Translator: Alex Yeshanu <eshanuap@gmail.com>\n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ../../../globalPlugins\n"
+
+#: ../../../globalPlugins/sayProductNameAndVersion.py:38
+msgid "Application"
+msgstr "Приложение"
+
+#: ../../../globalPlugins/sayProductNameAndVersion.py:44
+#: ../../../globalPlugins/sayProductNameAndVersion.py:46
+#, python-brace-format
+msgid "{name} version {version}"
+msgstr "{name} версия {version}"
+
+#: ../../../globalPlugins/sayProductNameAndVersion.py:48
+#, python-brace-format
+msgid "{name} version {version} copied to the clipboard"
+msgstr "{name} версия {version} скопированы в буфер обмена"
+
+#: ../../../globalPlugins/sayProductNameAndVersion.py:53
+msgid "Cannot copy version informations to the clipboard."
+msgstr "Не удается скопировать информацию о версии в буфер обмена."
+
+#: ../../../globalPlugins/sayProductNameAndVersion.py:56
+msgid "Unable to get version info"
+msgstr "Невозможно получить информацию о версии"
+
+#: ../../../globalPlugins/sayProductNameAndVersion.py:61
+msgid ""
+"Say product name and version of the application which ownes the focused "
+"window. If pressed twice, copy these information to the clipboard"
+msgstr ""
+"Сообщает название и версию приложения, окно которого под курсором. Если "
+"нажать дважды, копирует эту информацию в буфер обмена"
