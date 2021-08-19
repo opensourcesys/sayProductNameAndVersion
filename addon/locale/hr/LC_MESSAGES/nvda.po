@@ -21,35 +21,28 @@ msgstr ""
 "Language: hr\n"
 
 #. Translators: This is used when the name of the focused application cannot be found.
-#: addon/globalPlugins/sayProductNameAndVersion.py:35
 msgid "Application"
 msgstr "Aplikacija."
 
 #. Translators: This is the message which will be spoken or copied to the clipboard.
 #. {name} is the app name, {version} its the version.
-#: addon/globalPlugins/sayProductNameAndVersion.py:41
-#: addon/globalPlugins/sayProductNameAndVersion.py:43
 #, python-brace-format
 msgid "{name} version {version}"
 msgstr "{name} verzija {version}"
 
 #. Translators: This is the message announced when all informations has been copied.
-#: addon/globalPlugins/sayProductNameAndVersion.py:45
 #, python-brace-format
 msgid "{name} version {version} copied to the clipboard"
 msgstr "{name} verzija {version} kopirano u međuspremnik."
 
 #. Translators: This is the message announced when all informations hasn't been copied.
-#: addon/globalPlugins/sayProductNameAndVersion.py:50
 msgid "Cannot copy version informations to the clipboard."
 msgstr "Ne može se kopirati informacija o verziji."
 
 #. Translators: this will be spoken if version informations were not available.
-#: addon/globalPlugins/sayProductNameAndVersion.py:53
 msgid "Unable to get version info"
 msgstr "Nije moguće dobiti informaciju o verziji."
 
-#: addon/globalPlugins/sayProductNameAndVersion.py:58
 msgid ""
 "Announce the version of the executable of the focused window or copy it to "
 "the clipboard if pressed twice"
@@ -59,13 +52,11 @@ msgstr ""
 
 #. Add-on description
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
-#: buildVars.py:15
 msgid "Say Product Name and Version"
 msgstr "Izgovori Naziv I Verziju Proizvoda"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-#: buildVars.py:18
 msgid ""
 "Say product name and version of the application which ownes the focused "
 "window.\n"

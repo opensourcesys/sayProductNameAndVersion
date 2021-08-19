@@ -17,36 +17,29 @@ msgstr ""
 "X-Poedit-SearchPath-0: globalPlugins\\sayProductNameAndVersion\n"
 
 #. Translators: This is used when the name of the focused application cannot be found.
-#: addon/globalPlugins/sayProductNameAndVersion.py:38
 msgid "Application"
 msgstr "Application"
 
 #. Translators: This is the message which will be spoken or copied to the clipboard.
 #. {name} is the app name, {version} its the version.
-#: addon/globalPlugins/sayProductNameAndVersion.py:44
-#: addon/globalPlugins/sayProductNameAndVersion.py:46
 #, python-brace-format
 msgid "{name} version {version}"
 msgstr "{name} version {version}"
 
 #. Translators: This is the message announced when all informations has been copied.
-#: addon/globalPlugins/sayProductNameAndVersion.py:48
 #, python-brace-format
 msgid "{name} version {version} copied to the clipboard"
 msgstr "{name} version {version} copié dans le presse-papiers"
 
 #. Translators: This is the message announced when all informations hasn't been copied.
-#: addon/globalPlugins/sayProductNameAndVersion.py:53
 msgid "Cannot copy version informations to the clipboard."
 msgstr ""
 "Impossible de copier les informations de version dans le presse-papiers."
 
 #. Translators: this will be spoken if version informations were not available.
-#: addon/globalPlugins/sayProductNameAndVersion.py:56
 msgid "Unable to get version info"
 msgstr "Impossible de récupérer les info de version"
 
-#: addon/globalPlugins/sayProductNameAndVersion.py:61
 msgid ""
 "Say product name and version of the application which ownes the focused "
 "window. If pressed twice, copy these information to the clipboard"
@@ -56,13 +49,11 @@ msgstr ""
 
 #. Add-on description
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
-#: buildVars.py:23
 msgid "Say Product Name and Version"
 msgstr "Annoncer le nom de l'application et sa version"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-#: buildVars.py:26
 msgid ""
 "Say product name and version of the application which ownes the focused "
 "window.\n"
