@@ -1,8 +1,8 @@
 [[!meta title="Say Product Name and Version"]]
 
 * Author: Patrick ZAJDA <patrick@zajda.fr>
-* Download: [see releases][downloadLink]
 * NVDA compatibility: 2017.3 or later
+* Download [stable version][1]
 
 This NVDA add-on add a shortcut to announce product name and version of the foreground application, or copy these informations to the clipboard.
 
@@ -31,4 +31,6 @@ This NVDA add-on add a shortcut to announce product name and version of the fore
 
 * Initial Release
 
-[downloadLink]: https://github.com/Nardol/sayProductNameAndVersion/releases/latest
+[[!tag stable]]
+
+[1]: https://addons.nvda-project.org/files/get.php?file=spnav
