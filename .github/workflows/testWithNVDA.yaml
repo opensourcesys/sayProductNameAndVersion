@@ -2,8 +2,7 @@ name: Build and test NVDA add-on
 
 on:
   pull_request:
-    branches:
-      - master
+
 jobs:
 
   addon:
@@ -15,10 +14,10 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-    - name: Set up Python 3.7
+    - name: Set up Python 3.8
       uses: actions/setup-python@v2
       with:
-        python-version: 3.7
+        python-version: 3.8
     - name: Install dependencies
       run: |
         pip install scons markdown
@@ -32,7 +31,7 @@ jobs:
         name: nvda-addon
         path: "*.nvda-addon"
     - name: Build pot
-      run: scons pot
+      run: scons pot version=${{ github.sha }}
     - name: Upload pot
       uses: actions/upload-artifact@v2
       with:
@@ -97,4 +96,5 @@ jobs:
         move *.pot tests\nvda.pot
         cd tests
         python checkPot.py nvda.pot > potResults.txt
+        type potResults.txt
         If (Select-String -Path potResults.txt -Pattern 'Message has no translator comment' -SimpleMatch) {exit 1}
