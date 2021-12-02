@@ -8,50 +8,49 @@ msgstr ""
 "Project-Id-Version: sayProductNameAndVersion 2021.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-08-17 08:33+0000\n"
-"PO-Revision-Date: 2021-09-21 09:08+0200\n"
-"Language: fr\n"
+"PO-Revision-Date: 2021-09-04 13:55+0200\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: Michel Such <michelsuch93@gmail.com>\n"
+"Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"
 "Language-Team: \n"
 "X-Generator: Poedit 3.0\n"
 
 #. Translators: This is used when the name of the focused application cannot be found.
 msgid "Application"
-msgstr "Application"
+msgstr "Aplikacja"
 
 #. Translators: This is the message which will be spoken or copied to the clipboard.
 #. {name} is the app name, {version} its the version.
 #, python-brace-format
 msgid "{name} version {version}"
-msgstr "{name} version {version}"
+msgstr "{version} wersja {name}"
 
 #. Translators: This is the message announced when all informations has been copied.
 #, python-brace-format
 msgid "{name} version {version} copied to the clipboard"
-msgstr "{name} version {version} copié dans le presse-papiers"
+msgstr "{name} wersja {version} skopiowana do schowka"
 
 #. Translators: This is the message announced when all informations hasn't been copied.
 msgid "Cannot copy version informations to the clipboard."
-msgstr ""
-"Impossible de copier les informations de version dans le presse-papiers."
+msgstr "Nie można skopiować informacji o wersji do schowka."
 
 #. Translators: this will be spoken if version informations were not available.
 msgid "Unable to get version info"
-msgstr "Impossible d'obtenir l'information de version"
+msgstr "Nie można uzyskać informacji o wersji"
 
 msgid ""
 "Say product name and version of the application which ownes the focused "
 "window. If pressed twice, copy these information to the clipboard"
 msgstr ""
-"Annoncer le nom et la version de l'application en avant-plan. Un double "
-"appui copie cette information dans le presse-papiers."
+"Wymawia nazwę produktu i jego wersję,. W przypadku dwukrotnego "
+"naciśnięcia kopiuje informacje do schowka"
 
 #. Add-on description
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Say Product Name and Version"
-msgstr "Annoncer le Nom de l'Application et sa Version"
+msgstr "Say Product Name and Version"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -60,5 +59,6 @@ msgid ""
 "window.\n"
 "Shortcut: Shift+NVDA+V"
 msgstr ""
-"Annoncer le nom et la version de l'application en avant-plan.\n"
-"Raccourci clavier : NVDA+maj+v"
+"Powiedz nazwę produktu i wersję aplikacji, która jest właścicielem okna "
+"priorytetowego.\n"
+"Skrót: Shift+NVDA+V"
