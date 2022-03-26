@@ -16,17 +16,11 @@ jobs:
     steps:
     - name: Checkout main
       uses: actions/checkout@v2
-    - name: Get repository name
-      id: getRepoName
-      uses: actions/github-script@v5
-      with:
-        script: return context.repo.repo
-        result-encoding: string
     - name: Push changes
       run: |
         git config --global user.name github-actions
         git config --global user.email github-actions@github.com
-        git remote add l10n https://github.com/nvdaaddons/${{ steps.getRepoName.outputs.result }}
+        git remote add l10n https://github.com/nvdaaddons/SayProductNameAndVersion
         git fetch l10n
         git reset l10n/stable addon/doc addon/locale
         git commit -m "Update translations"
