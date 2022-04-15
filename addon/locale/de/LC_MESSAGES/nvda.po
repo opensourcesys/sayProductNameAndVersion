@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: sayProductNameAndVersion 2021.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-08-17 08:33+0000\n"
-"PO-Revision-Date: 2021-11-07 18:43+0100\n"
+"PO-Revision-Date: 2022-04-14 16:34+0200\n"
+"Last-Translator: René Linke <rene.linke@hamburg.de>\n"
+"Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: Bernd Dorer <mail@bdorer.de>\n"
-"Language-Team: \n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. Translators: This is used when the name of the focused application cannot be found.
 msgid "Application"
@@ -34,24 +34,26 @@ msgstr "{name} Version {version} in die Zwischenablage kopiert"
 
 #. Translators: This is the message announced when all informations hasn't been copied.
 msgid "Cannot copy version informations to the clipboard."
-msgstr "Kann keine Versionsinformationen in die Zwischenablage kopieren."
+msgstr ""
+"Die Versionsinformationen konnten nicht in die Zwischenablage kopiert "
+"werden."
 
 #. Translators: this will be spoken if version informations were not available.
 msgid "Unable to get version info"
-msgstr "Erhalte keine Versionsinformation"
+msgstr "Keine Versionsinformationen gefunden"
 
 msgid ""
 "Say product name and version of the application which ownes the focused "
 "window. If pressed twice, copy these information to the clipboard"
 msgstr ""
-"Nenne den Namen und die Version der fokussierten Anwendung. Wenn Sie "
-"die Tastenkombination zwei mal betätigen, wird die Information in die "
+"Den Namen und die Version der aktuellen Anwendung mitteilen. Wenn Sie "
+"die Tastenkombination zweimal drücken, wird die Information in die "
 "Zwischenablage kopiert"
 
 #. Add-on description
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Say Product Name and Version"
-msgstr "Nenne Anwendungsname und Version"
+msgstr "Name und Version der Anwendung mitteilen"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -60,5 +62,5 @@ msgid ""
 "window.\n"
 "Shortcut: Shift+NVDA+V"
 msgstr ""
-"Nenne den Anwendungsnamen und die Version der fokussierten Anwendung.\n"
+"Name und Version der aktuellen Anwendung mitteilen.\n"
 "Tastenkürzel: Umschalt+NVDA+V"
