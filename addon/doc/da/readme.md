@@ -4,9 +4,8 @@
 * NVDA -kompatibilitet: 2017.3 eller nyere
 * Download [stabil version][1]
 
-Denne NVDA-tilføjelse tilføjer en genvej, der oplyser produktnavn og version
-for programmet med fokus, eller kopiere disse oplysninger til
-udklipsholderen.
+This NVDA add-on adds a shortcut to announce product name and version of the
+foreground application, or copy these informations to the clipboard.
 
 * Genvej: NVDA+Shift+V
 * Tryk to gange for at kopiere produktnavn og version til udklipsholderen.
@@ -15,8 +14,8 @@ udklipsholderen.
 
 * Tilføj kroatisk oversættelse takket være Tarik Hadžirović og Goran Parać
 * Opdateret hjælpemeddelelse
-* Opdater dokumentationsstil for synshandicappede brugere
-* Flyttede genvej fra tale til værktøjskategorien
+* Update documentation style for visually impaired users
+* Move shortcut from Speech to tools category
 
 ## Ændringer for 2020.02 ##
 
@@ -27,8 +26,8 @@ udklipsholderen.
 
 ## Ændringer til 1.0.1 ##
 
-* Rettede meddelelsen efter at have kopieret oplysninger til
-  udklipsholderen, som ikke var oversat.
+* Fixed the message after copying informations to the clipboard which was
+  not translated.
 
 ## Ændringer i 1.0 ##
 

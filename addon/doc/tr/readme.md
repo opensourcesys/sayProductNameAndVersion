@@ -4,8 +4,8 @@
 * NVDA uyumluluğu: 2017.3 veya üstü
 * [kararlı sürümü][1] indir
 
-Bu NVDA eklentisi, aktif uygulamanın ürün adını ve sürümünü duyurmak için
-bir kısayol ekler veya bu bilgileri panoya kopyalar.
+This NVDA add-on adds a shortcut to announce product name and version of the
+foreground application, or copy these informations to the clipboard.
 
 * Kısayol: NVDA+Shift+V
 * Ürün adını ve sürümünü panoya kopyalamak için iki kez basın.
@@ -14,8 +14,8 @@ bir kısayol ekler veya bu bilgileri panoya kopyalar.
 
 * Tarik Hadžirović ve Goran Parać katkılarıyla Hırvatça çeviri eklendi.
 * Yardım mesajı güncellendi
-* Görme engelli kullanıcılar için dokümantasyon stili güncellendi.
-* Kısayol Konuşma kategorisinden araçlar kategorisine taşındı.
+* Update documentation style for visually impaired users
+* Move shortcut from Speech to tools category
 
 ## 2020.02 için Değişiklikler ##
 
@@ -27,7 +27,8 @@ bir kısayol ekler veya bu bilgileri panoya kopyalar.
 
 ## 1.0.1 için değişiklikler ##
 
-* Bilgiler panoya kopyalandıktan sonra çevrilmeyen mesaj düzeltildi.
+* Fixed the message after copying informations to the clipboard which was
+  not translated.
 
 ## 1.0 için değişiklikler ##
 
