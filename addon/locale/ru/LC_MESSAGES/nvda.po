@@ -1,38 +1,67 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the 'sayProductNameAndVersion' package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: SayProductNameAndVersion\n"
-"POT-Creation-Date: 2021-08-12 07:35+0300\n"
-"PO-Revision-Date: 2021-08-12 07:35+0300\n"
-"Last-Translator: Alex Yeshanu <eshanuap@gmail.com>\n"
+"Project-Id-Version: 'sayProductNameAndVersion' '2021.04'\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
+"POT-Creation-Date: 2022-05-21 19:18+0400\n"
+"PO-Revision-Date: 2022-05-21 19:25+0400\n"
+"Last-Translator: Dragan Ratkovich\n"
 "Language-Team: \n"
-"Language: ru_RU\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.4\n"
-"X-Poedit-Basepath: .\n"
-"X-Poedit-SearchPath-0: ../../../globalPlugins\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.0.1\n"
 
+#. Translators: This is used when the name of the focused application cannot be found.
 msgid "Application"
 msgstr "Приложение"
 
+#. Translators: This is the message which will be spoken or copied to the clipboard.
+#. {name} is the app name, {version} its the version.
 #, python-brace-format
 msgid "{name} version {version}"
 msgstr "{name} версия {version}"
 
+#. Translators: This is the message announced when all informations has been copied.
 #, python-brace-format
 msgid "{name} version {version} copied to the clipboard"
-msgstr "{name} версия {version} скопированы в буфер обмена"
+msgstr "{name} версия {version} скопировано в буфер обмена"
 
+#. Translators: This is the message announced when all informations hasn't been copied.
 msgid "Cannot copy version informations to the clipboard."
 msgstr "Не удается скопировать информацию о версии в буфер обмена."
 
+#. Translators: this will be spoken if version informations were not available.
 msgid "Unable to get version info"
-msgstr "Невозможно получить информацию о версии"
+msgstr "Не удалось получить информацию о версии"
 
 msgid ""
 "Say product name and version of the application which ownes the focused "
 "window. If pressed twice, copy these information to the clipboard"
 msgstr ""
-"Сообщает название и версию приложения, окно которого под курсором. Если "
-"нажать дважды, копирует эту информацию в буфер обмена"
+"Объявляет имя продукта и версию приложения, которому принадлежит "
+"выделенное окно. При двойном нажатии копирует эту информацию в буфер "
+"обмена"
+
+#. Add-on description
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Say Product Name and Version"
+msgstr "Объявить название и версию продукта"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"Say product name and version of the application which ownes the focused "
+"window.\n"
+"Shortcut: Shift+NVDA+V"
+msgstr ""
+"Объявляет имя продукта и версию приложения, которому принадлежит "
+"выделенное окно.\n"
+"Горячая клавиша: Shift+NVDA+V"

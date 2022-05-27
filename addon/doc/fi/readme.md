@@ -4,7 +4,7 @@
 * Yhteensopivuus: NVDA 2017.3 tai uudempi
 * Lataa [vakaa versio][1]
 
-Tämä lisäosa lisää pikanäppäimen aktiivisen sovelluksen tuotenimen ja
+Tämä lisäosa lisää pikanäppäimen etualalla olevan sovelluksen tuotenimen ja
 -version ilmoittamista tai leikepöydälle kopioimista varten.
 
 * Pikanäppäin: NVDA+Vaihto+V

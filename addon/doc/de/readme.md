@@ -18,20 +18,21 @@ Zwischenablage kopiert werden kann.
   Parać
 * Hilfe-Meldung aktualisiert
 * Dokumentation für sehbehinderte Nutzer aktualisiert
-* Tastenkombination aus der Kategorie Sprache nach Werkzeuge verschoben
+* Die Tastenkombination wurde aus der Kategorie "Sprache" nach "Werkzeuge"
+  verschoben
 
 ## Änderungen in  2020.02 ##
 
 * Kompatibilität zu Python 3
-* Informationen werden nun von NVDA verwendet, anstatt über ein externes
-  Modul. 
+* Die Informationen werden von NVDA direkt selbst verwendet, anstatt über
+  ein externes Modul zu benutzen
 * Verwendet den Script-Decorator für die Informationen der Erweiterung
 * Verwendet die letzte Version der Erweiterungsvorlage
 
 ## Änderungen in 1.0.1 ##
 
 * Die Meldung nach dem Kopieren von Informationen in die Zwischenablage
-  wurde behoben. Sie war nicht übersetzt worden.
+  wurde behoben. Sie wird korrekt übersetzt.
 
 ## Änderungen in 1.0 ##
 

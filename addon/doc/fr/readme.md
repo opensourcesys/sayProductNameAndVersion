@@ -4,8 +4,8 @@
 * Compatibilité NVDA : à partir de 2017.3
 * Télécharger [version stable][1]
 
-Cette extension ajoute un raccourci pour annoncer ou copier dans le
-presse-papiers le nom et la version de l'application en avant-plan.
+This NVDA add-on adds a shortcut to announce product name and version of the
+foreground application, or copy these informations to the clipboard.
 
 * Raccourci : NVDA+Shift+V
 * Le faire deux fois pour copier ces informations dans le presse-papiers
@@ -14,9 +14,8 @@ presse-papiers le nom et la version de l'application en avant-plan.
 
 * Ajout de la traduction Croate par Tarik Hadžirović and Goran Parać
 * Mise à jour du message d'aide
-* Mise à jour de la feuille de style de la documentation pour les
-  mal-voyants
-* Le raccourci est maintenant dans la catégorie outils
+* Update documentation style for visually impaired users
+* Move shortcut from Speech to tools category
 
 ## Changements pour la version 2020.02 ##
 
@@ -28,8 +27,8 @@ presse-papiers le nom et la version de l'application en avant-plan.
 
 ## Changements pour la version 1.0.1 ##
 
-* Correction du message après copie dans le presse-papiers qui n'était pas
-  traduit
+* Fixed the message after copying informations to the clipboard which was
+  not translated.
 
 ## Changements pour la version 1.0 ##
 
