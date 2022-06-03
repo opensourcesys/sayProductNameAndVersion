@@ -4,8 +4,8 @@
 * NVDA kompatibilnost: 2017.3 ili novija
 * Preuzmi [stabilnu verziju][1]
 
-This NVDA add-on adds a shortcut to announce product name and version of the
-foreground application, or copy these informations to the clipboard.
+Ovaj NVDA dodatak dodaje prečac za najavu naziva proizvoda i verzije
+aktualno korištenog programa ili kopira te informacije u međuspremnik.
 
 * Prečac: NVDA+šift+V
 * Pritisni dvaput za kopiranje naziva i verzije proizvoda u međuspremnik.
@@ -14,8 +14,8 @@ foreground application, or copy these informations to the clipboard.
 
 * Prevodioci na hrvatski jezik: Tarik Hadžirović i Goran Parać
 * Aktualizirana poruka pomoći
-* Update documentation style for visually impaired users
-* Move shortcut from Speech to tools category
+* Aktualiziran stil dokumentacije za slabovidne korisnike
+* Prečac premješten iz kategorije govora u kategoriju alata
 
 ## Promjene u 2020.02 ##
 
@@ -27,8 +27,8 @@ foreground application, or copy these informations to the clipboard.
 
 ## Promjene u 1.0.1 ##
 
-* Fixed the message after copying informations to the clipboard which was
-  not translated.
+* Ispravljena je poruka nakon kopiranja informacija u međuspremnik koja nije
+  bila prevedena.
 
 ## Promjene u 1.0 ##
 
