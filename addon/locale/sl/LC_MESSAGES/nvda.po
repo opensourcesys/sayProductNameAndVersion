@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the sayProductNameAndVersion package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sayProductNameAndVersion 2021.07\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2021-08-17 08:33+0000\n"
+"PO-Revision-Date: 2022-06-14 16:24+0100\n"
+"Last-Translator: Jožef Gregorc <jozko.gregorc@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#. Translators: This is used when the name of the focused application cannot be found.
+msgid "Application"
+msgstr "Program"
+
+#. Translators: This is the message which will be spoken or copied to the clipboard.
+#. {name} is the app name, {version} its the version.
+msgid "{name} version {version}"
+msgstr "{name} različica {version}"
+
+#. Translators: This is the message announced when all informations has been copied.
+msgid "{name} version {version} copied to the clipboard"
+msgstr "{name} različica {version} se je preslikalo v odložišče"
+
+#. Translators: This is the message announced when all informations hasn't been copied.
+msgid "Cannot copy version informations to the clipboard."
+msgstr "Ni mogoče preslikati v odložišče informacije o različici."
+
+#. Translators: this will be spoken if version informations were not available.
+msgid "Unable to get version info"
+msgstr "Ni možno pridobiti informacije o različici"
+
+msgid ""
+"Say product name and version of the application which ownes the focused "
+"window. If pressed twice, copy these information to the clipboard"
+msgstr ""
+"Izgovori ime izdelka in različico programa, ki zavzema okno v žarišču. "
+"Dvojni pritisk to informacijo preslika v odložišče"
+
+#. Add-on description
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Say Product Name and Version"
+msgstr "Izgovori Ime Izdelka in Različico"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"Say product name and version of the application which ownes the focused "
+"window.\n"
+"Shortcut: Shift+NVDA+V"
+msgstr ""
+"Izgovori ime izdelka in različico programa, ki zavzema okno v žarišču. \n"
+"Privzeta Bližnjica: Shift+NVDA+V"
