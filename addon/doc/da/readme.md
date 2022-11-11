@@ -4,8 +4,9 @@
 * NVDA -kompatibilitet: 2017.3 eller nyere
 * Download [stabil version][1]
 
-This NVDA add-on adds a shortcut to announce product name and version of the
-foreground application, or copy these informations to the clipboard.
+Denne NVDA-tilføjelse tilføjer en genvej til at annoncere produktnavn og
+version af forgrundsapplikationen, eller kopier disse oplysninger til
+udklipsholderen.
 
 * Genvej: NVDA+Shift+V
 * Tryk to gange for at kopiere produktnavn og version til udklipsholderen.
@@ -14,8 +15,8 @@ foreground application, or copy these informations to the clipboard.
 
 * Tilføj kroatisk oversættelse takket være Tarik Hadžirović og Goran Parać
 * Opdateret hjælpemeddelelse
-* Update documentation style for visually impaired users
-* Move shortcut from Speech to tools category
+* Opdateret udseendet af dokumentationen for synshandicappede brugere
+* Flyttet genvej fra tale til værktøjskategori
 
 ## Ændringer for 2020.02 ##
 
@@ -26,8 +27,8 @@ foreground application, or copy these informations to the clipboard.
 
 ## Ændringer til 1.0.1 ##
 
-* Fixed the message after copying informations to the clipboard which was
-  not translated.
+* Rettede beskeden efter kopiering af oplysninger til udklipsholderen, som
+  ikke blev oversat.
 
 ## Ændringer i 1.0 ##
 
