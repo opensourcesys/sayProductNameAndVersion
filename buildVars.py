@@ -12,13 +12,11 @@
 def _(arg):
 	return arg
 
-#_ = lambda x : x
-
 # Add-on information variables
 addon_info = {
-# add-on Name
+	# add-on Name
 	"addon_name" : "sayProductNameAndVersion",
-	# Add-on description
+	# Add-on summary
 	# Translators: Summary for this add-on to be shown on installation and add-on information.
 	"addon_summary" : _("Say Product Name and Version"),
 	# Add-on description
@@ -29,16 +27,22 @@ Shortcut: Shift+NVDA+V"""),
 	"addon_version" : "2021.04",
 	# Author(s)
 	"addon_author" : "Patrick ZAJDA <patrick@zajda.fr>",
-# URL for the add-on documentation support
-"addon_url" : None,
+	# URL for the add-on documentation support
+	"addon_url" : None,
+	# URL for the add-on repository where the source code can be found
+	"addon_sourceURL": "https://github.com/Nardol/SayProductNameAndVersion",
 	# Documentation file name
 	"addon_docFileName" : "readme.html",
 	# Minimum NVDA version supported (e.g. "2018.3.0", minor version is optional)
 	"addon_minimumNVDAVersion" : "2017.3",
 	# Last NVDA version supported/tested (e.g. "2018.4.0", ideally more recent than minimum version)
-	"addon_lastTestedNVDAVersion" : "2022.1",
+	"addon_lastTestedNVDAVersion" : "2023.1",
 	# Add-on update channel (default is None, denoting stable releases, and for development releases, use "dev"; do not change unless you know what you are doing)
 	"addon_updateChannel" : None,
+	# Add-on license such as GPL 2
+	"addon_license": "GPL V2",
+	# URL for the license document the ad-on is licensed under
+	"addon_licenseURL": "https://www.gnu.org/licenses/old-licenses/gpl-2.0.fr.html",
 }
 
 import os.path
