@@ -1,5 +1,5 @@
-## Changes for 2022.04 ##
+## Changes for 2023.3 ##
 
 * Translations update
-* Compatibility with 2022.1
+* Compatibility with 2023.1
 
