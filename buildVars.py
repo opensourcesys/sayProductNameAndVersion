@@ -28,7 +28,7 @@ Shortcut: Shift+NVDA+V"""),
 	# Author(s)
 	"addon_author" : "Patrick ZAJDA <patrick@zajda.fr>",
 	# URL for the add-on documentation support
-	"addon_url" : None,
+	"addon_url" : "https://addons.nvda-project.org",
 	# URL for the add-on repository where the source code can be found
 	"addon_sourceURL": "https://github.com/Nardol/SayProductNameAndVersion",
 	# Documentation file name
