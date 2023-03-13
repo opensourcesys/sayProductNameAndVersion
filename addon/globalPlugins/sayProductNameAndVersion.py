@@ -9,9 +9,9 @@
 # Press it twice to copy version information to the clipboard
 
 import addonHandler
-import scriptHandler
 import globalPluginHandler
 import api
+from scriptHandler import script, getLastScriptRepeatCount
 from ui import message
 from globalCommands import SCRCAT_TOOLS
 
@@ -20,9 +20,19 @@ addonHandler.initTranslation()
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
-	# We initialize the scripts category shown on input gestures dialog
-	scriptCategory = SCRCAT_TOOLS
 
+	def __init__(self, *args, **kwargs):
+		super().__init__()
+
+	@script(
+		category=SCRCAT_TOOLS,
+		gesture="kb:NVDA+Shift+v",
+		description=_(
+			# Translators: Input help mode message for say product name and version command.
+			"Speaks the product name and version of the application which ownes the focused window."
+			" If pressed twice, copies this information to the clipboard"
+		)
+	)
 	def script_sayProductNameAndVersion(self, gesture):
 		focus = api.getFocusObject()
 		try:
@@ -38,7 +48,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Translators: This is used when the name of the focused application cannot be found.
 			productName = _("Application")
 		if productName != "" and productVersion != "":
-			isSameScript = scriptHandler.getLastScriptRepeatCount()
+			isSameScript = getLastScriptRepeatCount()
 			if isSameScript == 0:
 				# Translators: This is the message which will be spoken or copied to the clipboard.
 				# {name} is the app name, {version} is the version.
@@ -55,14 +65,3 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:
 			# Translators: this will be spoken if version information was not available.
 			message(_("Unable to get version info"))
-
-	# Documentation
-	# Translators: Input help mode message for say product name and version command.
-	script_sayProductNameAndVersion.__doc__ = _(
-		"Say product name and version of the application which ownes the focused window. "
-		"If pressed twice, copy these information to the clipboard"
-	)
-
-	__gestures = {
-		"kb:NVDA+Shift+V": "sayProductNameAndVersion",
-	}
