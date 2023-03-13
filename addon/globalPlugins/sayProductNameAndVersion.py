@@ -11,8 +11,8 @@
 import addonHandler
 import scriptHandler
 import globalPluginHandler
-from ui import message
 import api
+from ui import message
 from globalCommands import SCRCAT_TOOLS
 
 # initialize translations
@@ -41,19 +41,19 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			isSameScript = scriptHandler.getLastScriptRepeatCount()
 			if isSameScript == 0:
 				# Translators: This is the message which will be spoken or copied to the clipboard.
-				# {name} is the app name, {version} its the version.
+				# {name} is the app name, {version} is the version.
 				message(_("{name} version {version}").format(name=productName, version=productVersion))
 			else:
 				if api.copyToClip(_("{name} version {version}").format(name=productName, version=productVersion)):
-					# Translators: This is the message announced when all informations has been copied.
-					message(_(u"{name} version {version} copied to the clipboard").format(
+					# Translators: This is the message announced when all information has been copied.
+					message(_("{name} version {version} copied to the clipboard").format(
 						name=productName, version=productVersion
 					))
 				else:
-					# Translators: This is the message announced when all informations hasn't been copied.
-					message(_("Cannot copy version informations to the clipboard."))
+					# Translators: This is the message announced when all information hasn't been copied.
+					message(_("Cannot copy version information to the clipboard."))
 		else:
-			# Translators: this will be spoken if version informations were not available.
+			# Translators: this will be spoken if version information was not available.
 			message(_("Unable to get version info"))
 
 	# Documentation
