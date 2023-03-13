@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 # Name and version Info Of Current program announcement Global Plugin for NVDA
-# Copyright (C) 2014 Patrick ZAJDA <patrick@zajda.fr>
+# Copyright (C) 2023 Luke Davis <XLTechie@newanswertech.com>
+# Original author copyright (C) 2014-2023 Patrick ZAJDA <patrick@zajda.fr>
 # This file is covered by the GNU General Public License.
 # You can read the licence by clicking Help->Licence in the NVDA menu
 # or by visiting http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 # Shortcut: NVDA+Shift+V
-# Press it twice to copy version informations to the clipboard
+# Press it twice to copy version information to the clipboard
 
 import addonHandler
 import scriptHandler
