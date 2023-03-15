@@ -3,7 +3,7 @@ name: build addon
 on:
   push:
     tags: ["*"]
-    branches-ignore: [ main , master ]
+    branches: ["**.**"]
   pull_request:
     branches: [ main, master ]
   workflow_dispatch:
