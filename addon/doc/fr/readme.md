@@ -1,39 +1,23 @@
 # Annoncer le nom de l'application et sa version #
 
-* Auteur : Patrick ZAJDA <patrick@zajda.fr>
+* Author: Patrick ZAJDA <patrick@zajda.fr>, Luke Davis
+  <XLTechie@newanswertech.com>
 * Compatibilité NVDA : à partir de 2017.3
 * Télécharger [version stable][1]
 
 This NVDA add-on adds a shortcut to announce product name and version of the
-foreground application, or copy these informations to the clipboard.
+foreground application, or copies this information to the clipboard.
 
 * Raccourci : NVDA+Shift+V
 * Le faire deux fois pour copier ces informations dans le presse-papiers
 
-## Changements pour la version 2021.07 ##
+This shortcut may be remapped in the Tools category of NVDA's Input
+Gestures.
 
-* Ajout de la traduction Croate par Tarik Hadžirović and Goran Parać
-* Mise à jour du message d'aide
-* Update documentation style for visually impaired users
-* Move shortcut from Speech to tools category
-
-## Changements pour la version 2020.02 ##
-
-* Compatibilité avec Python 3
-* Utilise les informations depuis NVVDA lui-même au lieu d'utiliser un
-  module externe
-* Utilise le décorateur script pour les informations du plugin
-* Utilise la dernière version du modèle d'extension
-
-## Changements pour la version 1.0.1 ##
-
-* Fixed the message after copying informations to the clipboard which was
-  not translated.
-
-## Changements pour la version 1.0 ##
-
-* Première version
+For change history, please read the
+[changelog](https://github.com/opensourcesys/sayProductNameAndVersion/blob/master/changelog.md#readme).
 
 [[!tag stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=spnav
+[1]:
+https://addons.nvda-project.org/files/get.php?file=sayProductNameAndVersion

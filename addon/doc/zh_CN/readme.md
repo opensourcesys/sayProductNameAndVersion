@@ -1,36 +1,23 @@
 # 程序名称和版本朗读插件 #
 
-* 作者： Patrick ZAJDA <patrick@zajda.fr>
+* Author: Patrick ZAJDA <patrick@zajda.fr>, Luke Davis
+  <XLTechie@newanswertech.com>
 * NVDA 兼容版本：2017.3 或更高
 * 下载 [稳定版][1]
 
-此插件添加了一个快捷键以读出前台应用程序的产品名称和版本，或者将这些信息复制到剪贴板。
+This NVDA add-on adds a shortcut to announce product name and version of the
+foreground application, or copies this information to the clipboard.
 
 * 快捷键：NVDA+Shift+V
 * 连按两次可将产品名称和版本复制到剪贴板。
 
-## 版本 2021.07 ##
+This shortcut may be remapped in the Tools category of NVDA's Input
+Gestures.
 
-* 添加克罗地亚语翻译（感谢 Tarik Hadžirović 和 Goran Parać）
-* 更新帮助信息
-* 为视障用户更新文档样式
-* 将快捷键从语音移动到工具类别
-
-## 版本 2020.02 ##
-
-* 兼容 Python 3
-* 使用来自 NVDA 本身的信息而非外部模块
-* 使用脚本装饰器获取全局插件信息
-* 使用最新版本的插件模板
-
-## 版本 1.0.1 ##
-
-* 修复了未翻译将信息复制到剪贴板的消息。
-
-## 版本 1.0 ##
-
-* 初始发行版
+For change history, please read the
+[changelog](https://github.com/opensourcesys/sayProductNameAndVersion/blob/master/changelog.md#readme).
 
 [[!tag stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=spnav
+[1]:
+https://addons.nvda-project.org/files/get.php?file=sayProductNameAndVersion
