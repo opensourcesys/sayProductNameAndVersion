@@ -1,6 +1,7 @@
 # Decir nombre de producto y versión #
 
-* Autor: Patrick ZAJDA <patrick@zajda.fr>
+* Autor: Patrick ZAJDA <patrick@zajda.fr>, Luke Davis
+  <XLTechie@newanswertech.com>
 * Compatibilidad con NVDA: 2017.3 o posterior
 * Descargar [versión estable][1]
 
@@ -12,30 +13,13 @@ portapapeles.
 * Púlsalo dos veces para copiar el nombre del producto y versión al
   portapapeles.
 
-## Cambios para 2021.07 ##
+Se puede reasignar este atajo desde la categoría Herramientas de los gestos
+de entrada de NVDA.
 
-* Se añade la traducción al croata, gracias a Tarik Hadžirović y Goran Parać
-* Se actualiza el mensaje de ayuda
-* Se actualiza el estilo de la documentación para usuarios con baja visión
-* Se mueve el atajo desde la categoría Voz a Herramientas
-
-## Cambios para 2020.02 ##
-
-* Compatibilidad con Python 3
-* Se utiliza la información del propio NVDA en vez de recurrir a un módulo
-  externo
-* Se usa el decorador script para la información de la extensión global
-* Se utiliza la última versión de la plantilla de complementos
-
-## Cambios para 1.0.1 ##
-
-* Corregido el mensaje tras copiar la información al portapapeles, que no se
-  traducía.
-
-## Cambios para 1.0 ##
-
-* Versión inicial
+Para ver el historial de cambios, consulta el [registro de
+cambios](https://github.com/opensourcesys/sayProductNameAndVersion/blob/master/changelog.md#readme).
 
 [[!tag stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=spnav
+[1]:
+https://addons.nvda-project.org/files/get.php?file=sayProductNameAndVersion

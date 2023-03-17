@@ -1,6 +1,7 @@
 # Sano tuotteen nimi ja versio #
 
-* Tekijä: Patrick ZAJDA <patrick@zajda.fr>
+* Tekijät: Patrick ZAJDA <patrick@zajda.fr>, Luke Davis
+  <XLTechie@newanswertech.com>
 * Yhteensopivuus: NVDA 2017.3 tai uudempi
 * Lataa [vakaa versio][1]
 
@@ -10,30 +11,13 @@ Tämä lisäosa lisää pikanäppäimen etualalla olevan sovelluksen tuotenimen 
 * Pikanäppäin: NVDA+Vaihto+V
 * Kopioi tuotenimi ja -versio leikepöydälle painamalla kahdesti.
 
-## Muutokset versiossa 2021.07 ##
+Tämä pikanäppäin on mahdollista uudelleenmäärittää NVDA:n
+Näppäinkomennot-valintaikkunan Työkalut-kategoriasta.
 
-* Lisätty kroatiankielinen käännös (kiitokset Tarik Hadžirović'ille ja Goran
-  Parać'ille)
-* Ohjeviesti päivitetty
-* Dokumentaation tyyli päivitetty näkövammaisille sopivaksi
-* Pikanäppäin siirretty Puhe-kategoriasta Työkalut-kategoriaan
-
-## Muutokset versiossa 2020.02 ##
-
-* Python 3 -yhteensopivuus
-* Ulkoisen moduulin asemesta käytetään NVDA:n omia tietoja
-* Käytetään lisäosan tiedoissa skriptin koristelijaa
-* Käytetään lisäosamallin viimeisintä versiota
-
-## Muutokset versiossa 1.0.1 ##
-
-* Korjattu leikepöydälle kopioinnin jälkeen näytettävä viesti, jota ei ollut
-  käännetty.
-
-## Muutokset versiossa 1.0 ##
-
-* Ensimmäinen versio
+Muutoshistorian näet
+[muutoslokista](https://github.com/opensourcesys/sayProductNameAndVersion/blob/master/changelog.md#readme).
 
 [[!tag stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=spnav
+[1]:
+https://addons.nvda-project.org/files/get.php?file=sayProductNameAndVersion
