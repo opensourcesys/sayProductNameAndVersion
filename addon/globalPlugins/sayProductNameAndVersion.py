@@ -22,7 +22,7 @@ addonHandler.initTranslation()
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self, *args, **kwargs):
-		super().__init__()
+		super(GlobalPlugin, self).__init__()
 
 	@script(
 		category=SCRCAT_TOOLS,
