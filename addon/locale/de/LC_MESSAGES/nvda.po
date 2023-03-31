@@ -8,49 +8,49 @@ msgstr ""
 "Project-Id-Version: sayProductNameAndVersion 2021.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-08-17 08:33+0000\n"
-"PO-Revision-Date: 2022-04-14 16:34+0200\n"
+"PO-Revision-Date: 2023-03-24 08:18+0100\n"
 "Last-Translator: René Linke <rene.linke@hamburg.de>\n"
 "Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#. Translators: Input help mode message for say product name and version command.
+msgid ""
+"Speaks the product name and version of the application which ownes the "
+"focused window. If pressed twice, copies this information to the clipboard"
+msgstr ""
+"Teilt den Namen und die Version der Anwendung mit, die das fokussierte "
+"Fenster besitzt. Bei zweimaligem Drücken werden diese Informationen in die "
+"Zwischenablage kopiert"
 
 #. Translators: This is used when the name of the focused application cannot be found.
 msgid "Application"
 msgstr "Anwendung"
 
 #. Translators: This is the message which will be spoken or copied to the clipboard.
-#. {name} is the app name, {version} its the version.
+#. {name} is the app name, {version} is the version.
 #, python-brace-format
 msgid "{name} version {version}"
 msgstr "{name} Version {version}"
 
-#. Translators: This is the message announced when all informations has been copied.
+#. Translators: This is the message announced when all information has been copied.
 #, python-brace-format
 msgid "{name} version {version} copied to the clipboard"
 msgstr "{name} Version {version} in die Zwischenablage kopiert"
 
-#. Translators: This is the message announced when all informations hasn't been copied.
-msgid "Cannot copy version informations to the clipboard."
+#. Translators: This is the message announced when all information hasn't been copied.
+msgid "Cannot copy version information to the clipboard."
 msgstr ""
-"Die Versionsinformationen konnten nicht in die Zwischenablage kopiert "
-"werden."
+"Die Versionsinformationen konnten nicht in die Zwischenablage kopiert werden."
 
-#. Translators: this will be spoken if version informations were not available.
+#. Translators: this will be spoken if version information was not available.
 msgid "Unable to get version info"
 msgstr "Keine Versionsinformationen gefunden"
 
-msgid ""
-"Say product name and version of the application which ownes the focused "
-"window. If pressed twice, copy these information to the clipboard"
-msgstr ""
-"Den Namen und die Version der aktuellen Anwendung mitteilen. Wenn Sie "
-"die Tastenkombination zweimal drücken, wird die Information in die "
-"Zwischenablage kopiert"
-
-#. Add-on description
+#. Add-on summary
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Say Product Name and Version"
 msgstr "Name und Version der Anwendung mitteilen"
@@ -60,7 +60,8 @@ msgstr "Name und Version der Anwendung mitteilen"
 msgid ""
 "Say product name and version of the application which ownes the focused "
 "window.\n"
-"Shortcut: Shift+NVDA+V"
+"Default shortcut: Shift+NVDA+V"
 msgstr ""
-"Name und Version der aktuellen Anwendung mitteilen.\n"
-"Tastenkürzel: Umschalt+NVDA+V"
+"Teilt den Namen und die Version der Anwendung mit, die das fokussierte "
+"Fenster besitzt.\n"
+"Standardkürzel: Umschalt+NVDA+V"
