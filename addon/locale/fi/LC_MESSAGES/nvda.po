@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: sayProductNameAndVersion\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-08-17 08:33+0000\n"
-"PO-Revision-Date: 2021-08-23 08:50+0200\n"
-"Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
+"PO-Revision-Date: 2023-03-18 00:10+0200\n"
+"Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
 "Language-Team: fi_FI <janikinnunen340@gmail.com>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -18,37 +18,38 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.6.11\n"
 
+#. Translators: Input help mode message for say product name and version command.
+msgid ""
+"Speaks the product name and version of the application which ownes the "
+"focused window. If pressed twice, copies this information to the clipboard"
+msgstr ""
+"Puhuu aktiivisen sovelluksen tuotenimen ja version. Kahdesti painettaessa "
+"tiedot kopioidaan leikepöydälle."
+
 #. Translators: This is used when the name of the focused application cannot be found.
 msgid "Application"
 msgstr "Sovellus"
 
 #. Translators: This is the message which will be spoken or copied to the clipboard.
-#. {name} is the app name, {version} its the version.
+#. {name} is the app name, {version} is the version.
 #, python-brace-format
 msgid "{name} version {version}"
 msgstr "{name}, versio {version}"
 
-#. Translators: This is the message announced when all informations has been copied.
+#. Translators: This is the message announced when all information has been copied.
 #, python-brace-format
 msgid "{name} version {version} copied to the clipboard"
 msgstr "{name}, versio {version} kopioitu leikepöydälle"
 
-#. Translators: This is the message announced when all informations hasn't been copied.
-msgid "Cannot copy version informations to the clipboard."
+#. Translators: This is the message announced when all information hasn't been copied.
+msgid "Cannot copy version information to the clipboard."
 msgstr "Versiotietoja ei voi kopioida leikepöydälle."
 
-#. Translators: this will be spoken if version informations were not available.
+#. Translators: this will be spoken if version information was not available.
 msgid "Unable to get version info"
 msgstr "Versiotietoja ei ole saatavilla"
 
-msgid ""
-"Say product name and version of the application which ownes the focused "
-"window. If pressed twice, copy these information to the clipboard"
-msgstr ""
-"Sanoo aktiivisen sovelluksen tuotenimen ja version. Kahdesti painettaessa "
-"tiedot kopioidaan leikepöydälle."
-
-#. Add-on description
+#. Add-on summary
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Say Product Name and Version"
 msgstr "Sano tuotenimi ja versio"
@@ -58,7 +59,7 @@ msgstr "Sano tuotenimi ja versio"
 msgid ""
 "Say product name and version of the application which ownes the focused "
 "window.\n"
-"Shortcut: Shift+NVDA+V"
+"Default shortcut: Shift+NVDA+V"
 msgstr ""
 "Sanoo aktiivisen sovelluksen tuotenimen ja version.\n"
-"Pikanäppäin: NVDA+Vaihto+V"
+"Oletuspikanäppäin: NVDA+Vaihto+V"
