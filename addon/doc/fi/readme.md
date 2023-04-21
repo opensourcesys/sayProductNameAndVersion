@@ -20,4 +20,4 @@ Muutoshistorian näet
 [[!tag stable]]
 
 [1]:
-https://addons.nvda-project.org/files/get.php?file=sayProductNameAndVersion
+https://www.nvaccess.org/addonStore/legacy?file=sayProductNameAndVersion
