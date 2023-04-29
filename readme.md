@@ -1,5 +1,3 @@
-[[!meta title="Say Product Name and Version"]]
-
 * Author: Patrick ZAJDA <patrick@zajda.fr>, Luke Davis <XLTechie@newanswertech.com>
 * NVDA compatibility: 2017.3 or later
 * Download [stable version][1]
@@ -13,6 +11,4 @@ This shortcut may be remapped in the Tools category of NVDA's Input Gestures.
 
 For change history, please read the [changelog](https://github.com/opensourcesys/sayProductNameAndVersion/blob/master/changelog.md#readme).
 
-[[!tag stable]]
-
-[1]: https://addons.nvda-project.org/files/get.php?file=sayProductNameAndVersion
+[1]: https://www.nvaccess.org/addonStore/legacy?file=sayProductNameAndVersion

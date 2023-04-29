@@ -1,5 +1,11 @@
 ### Changelog
 
+Note: language-only releases are not included here.
+
+#### 2023.3.3
+
+* Restored Python 2.7 compatibility at user and original author request. (#3)
+
 #### 2023.3.1
 
 * Luke Davis has taken over maintenance of the add-on.
