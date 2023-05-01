@@ -1,6 +1,10 @@
 ### Changelog
 
-Note: language-only releases are not included here.
+Note: translation-only releases are not included here.
+
+### 2023.3.4
+
+* Bug fix release, followup of PR #3: fully restores NVDA 2017.3 support by ending use of @script. The decorator didn't become part of NVDA until 2018.3.
 
 #### 2023.3.3
 

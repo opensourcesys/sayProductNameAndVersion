@@ -11,7 +11,7 @@
 import addonHandler
 import globalPluginHandler
 import api
-from scriptHandler import script, getLastScriptRepeatCount
+from scriptHandler import getLastScriptRepeatCount
 from ui import message
 from globalCommands import SCRCAT_TOOLS
 
@@ -24,15 +24,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def __init__(self, *args, **kwargs):
 		super(GlobalPlugin, self).__init__()
 
-	@script(
-		category=SCRCAT_TOOLS,
-		gesture="kb:NVDA+Shift+v",
-		description=_(
-			# Translators: Input help mode message for say product name and version command.
-			"Speaks the product name and version of the application which ownes the focused window."
-			" If pressed twice, copies this information to the clipboard"
-		)
-	)
+	# Can't use @script while remaining compatible with NVDA 2017.3.
 	def script_sayProductNameAndVersion(self, gesture):
 		focus = api.getFocusObject()
 		try:
@@ -65,3 +57,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:
 			# Translators: this will be spoken if version information was not available.
 			message(_("Unable to get version info"))
+
+	script_sayProductNameAndVersion.category = SCRCAT_TOOLS
+	script_sayProductNameAndVersion.__doc__ = _(
+		# Translators: Input help mode message for say product name and version command.
+		"Speaks the product name and version of the application which ownes the focused window."
+		" If pressed twice, copies this information to the clipboard"
+	)
+	__gestures = { "kb:NVDA+Shift+v": "sayProductNameAndVersion" }
