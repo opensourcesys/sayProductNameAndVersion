@@ -8,46 +8,47 @@ msgstr ""
 "Project-Id-Version: sayProductNameAndVersion 2021.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-08-17 08:33+0000\n"
-"PO-Revision-Date: 2021-11-07 09:05+0300\n"
+"PO-Revision-Date: 2023-05-01 21:26+0300\n"
+"Last-Translator: Umut KORKMAZ <umutkork@gmail.com>\n"
+"Language-Team: \n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: Çağrı Doğan <cagrid@hotmail.com>\n"
-"Language-Team: \n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#. Translators: Input help mode message for say product name and version command.
+msgid ""
+"Speaks the product name and version of the application which ownes the "
+"focused window. If pressed twice, copies this information to the clipboard"
+msgstr ""
+"Odaklanılan pencereye sahip olan uygulamanın ürün adını ve sürümünü söyler. "
+"İki kez basılırsa, bu bilgileri panoya kopyalar"
 
 #. Translators: This is used when the name of the focused application cannot be found.
 msgid "Application"
 msgstr "Uygulama"
 
 #. Translators: This is the message which will be spoken or copied to the clipboard.
-#. {name} is the app name, {version} its the version.
+#. {name} is the app name, {version} is the version.
 #, python-brace-format
 msgid "{name} version {version}"
 msgstr "{name}, Sürüm {version}"
 
-#. Translators: This is the message announced when all informations has been copied.
+#. Translators: This is the message announced when all information has been copied.
 #, python-brace-format
 msgid "{name} version {version} copied to the clipboard"
 msgstr "{name} sürüm {version} panoya kopyalandı"
 
-#. Translators: This is the message announced when all informations hasn't been copied.
-msgid "Cannot copy version informations to the clipboard."
+#. Translators: This is the message announced when all information hasn't been copied.
+msgid "Cannot copy version information to the clipboard."
 msgstr "Sürüm bilgileri panoya kopyalanamıyor."
 
-#. Translators: this will be spoken if version informations were not available.
+#. Translators: this will be spoken if version information was not available.
 msgid "Unable to get version info"
 msgstr "Sürüm bilgisi alınamıyor"
 
-msgid ""
-"Say product name and version of the application which ownes the focused "
-"window. If pressed twice, copy these information to the clipboard"
-msgstr ""
-"Odaklanılan pencereye sahip olan uygulamanın ürün adını ve sürümünü "
-"söyler. İki kez basılırsa, bu bilgileri panoya kopyalar."
-
-#. Add-on description
+#. Add-on summary
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Say Product Name and Version"
 msgstr "Ürün Adını ve Sürümünü Söyle"
@@ -57,7 +58,7 @@ msgstr "Ürün Adını ve Sürümünü Söyle"
 msgid ""
 "Say product name and version of the application which ownes the focused "
 "window.\n"
-"Shortcut: Shift+NVDA+V"
+"Default shortcut: Shift+NVDA+V"
 msgstr ""
 "Odaklanılan pencereye sahip olan uygulamanın adını ve sürümünü söyler.\n"
 "Kısayol: Shift+NVDA+V"

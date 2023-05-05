@@ -8,47 +8,48 @@ msgstr ""
 "Project-Id-Version: sayProductNameAndVersion 2021.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-08-17 08:33+0000\n"
-"PO-Revision-Date: 2021-09-21 09:08+0200\n"
+"PO-Revision-Date: 2023-04-30 15:24+0200\n"
+"Last-Translator: Rémy Ruiz <remyruiz@gmail.com>\n"
+"Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: Michel Such <michelsuch93@gmail.com>\n"
-"Language-Team: \n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 1.8.8\n"
+
+#. Translators: Input help mode message for say product name and version command.
+msgid ""
+"Speaks the product name and version of the application which ownes the "
+"focused window. If pressed twice, copies this information to the clipboard"
+msgstr ""
+"Annoncer le nom et la version de l'application sous la fenêtre focalisée. "
+"Un double appui copie cette information dans le presse-papiers."
 
 #. Translators: This is used when the name of the focused application cannot be found.
 msgid "Application"
 msgstr "Application"
 
 #. Translators: This is the message which will be spoken or copied to the clipboard.
-#. {name} is the app name, {version} its the version.
+#. {name} is the app name, {version} is the version.
 #, python-brace-format
 msgid "{name} version {version}"
 msgstr "{name} version {version}"
 
-#. Translators: This is the message announced when all informations has been copied.
+#. Translators: This is the message announced when all information has been copied.
 #, python-brace-format
 msgid "{name} version {version} copied to the clipboard"
 msgstr "{name} version {version} copié dans le presse-papiers"
 
-#. Translators: This is the message announced when all informations hasn't been copied.
-msgid "Cannot copy version informations to the clipboard."
+#. Translators: This is the message announced when all information hasn't been copied.
+msgid "Cannot copy version information to the clipboard."
 msgstr ""
 "Impossible de copier les informations de version dans le presse-papiers."
 
-#. Translators: this will be spoken if version informations were not available.
+#. Translators: this will be spoken if version information was not available.
 msgid "Unable to get version info"
 msgstr "Impossible d'obtenir l'information de version"
 
-msgid ""
-"Say product name and version of the application which ownes the focused "
-"window. If pressed twice, copy these information to the clipboard"
-msgstr ""
-"Annoncer le nom et la version de l'application en avant-plan. Un double "
-"appui copie cette information dans le presse-papiers."
-
-#. Add-on description
+#. Add-on summary
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Say Product Name and Version"
 msgstr "Annoncer le Nom de l'Application et sa Version"
@@ -58,7 +59,8 @@ msgstr "Annoncer le Nom de l'Application et sa Version"
 msgid ""
 "Say product name and version of the application which ownes the focused "
 "window.\n"
-"Shortcut: Shift+NVDA+V"
+"Default shortcut: Shift+NVDA+V"
 msgstr ""
-"Annoncer le nom et la version de l'application en avant-plan.\n"
-"Raccourci clavier : NVDA+maj+v"
+"Annoncer le nom et la version de l'application sous la fenêtre "
+"focalisée.\n"
+"Raccourci clavier par défaut : NVDA+maj+v"
