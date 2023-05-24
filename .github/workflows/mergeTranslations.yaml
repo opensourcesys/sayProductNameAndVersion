@@ -1,0 +1,27 @@
+# https://crontab.guru/crontab.5.html
+
+name: Check for and merge l10n updates
+
+on:
+  workflow_dispatch:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '12 12 * * 5' # At 12:12 on Fridays (NV Access Translations update on Thursdays)
+
+jobs:
+  update-translations:
+    runs-on: windows-latest
+    steps:
+    - name: Checkout master
+      uses: actions/checkout@v2
+    - name: Merge changes
+      run: |
+        git config --global user.name github-actions
+        git config --global user.email github-actions@github.com
+        git pull
+        git remote add l10n https://github.com/nvdaaddons/sayProductNameAndVersion
+        git fetch l10n
+        git merge --ff-only l10n/stable
+        git push
+        
+        
