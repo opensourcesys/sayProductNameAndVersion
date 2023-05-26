@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '12 12 * * 5' # At 12:12 on Fridays (NV Access Translations update on Thursdays)
+    - cron:  '16 06 * * 5' # At 06:16 on Fridays (NV Access Translations update on Thursdays)
 
 jobs:
   update-translations:
@@ -21,7 +21,7 @@ jobs:
         git pull
         git remote add l10n https://github.com/nvdaaddons/sayProductNameAndVersion
         git fetch l10n
-        git merge --ff-only l10n/stable
+        git merge -q --ff -m "Translations automerge" l10n/stable
         git push
-        
+     
         
