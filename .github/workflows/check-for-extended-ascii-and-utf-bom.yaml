@@ -2,7 +2,15 @@ name: Check that we dont have extended ascii or utf boms in our files
 
 on:
   push:
+    branches:
+      - main
+      - master
+      - prime
   pull_request:
+    branches:
+      - main
+      - master
+      - prime
 
 jobs:
   extendedAsciiAndBom:
