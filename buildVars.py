@@ -24,7 +24,7 @@ addon_info = {
 	"addon_description" : _("""Say product name and version of the application which ownes the focused window.
 Default shortcut: Shift+NVDA+V"""),
 	# version
-	"addon_version" : "2023.3.6",
+	"addon_version" : "2023.3.7",
 	# Author(s)
 	"addon_author" : "Patrick ZAJDA <patrick@zajda.fr>, Luke Davis <XLTechie@newanswertech.com>",
 	# URL for the add-on documentation support
