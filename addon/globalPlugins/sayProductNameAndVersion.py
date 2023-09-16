@@ -42,12 +42,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if productName != "" and productVersion != "":
 			isSameScript = getLastScriptRepeatCount()
 			if isSameScript == 0:
-				# Translators: This is the message which will be spoken or copied to the clipboard.
+				# Translators: This is the message which will be spoken if the key is pressed once.
 				# {name} is the app name, {version} is the version.
 				message(_("{name} version {version}").format(name=productName, version=productVersion))
 			else:
-				if api.copyToClip(_("{name} version {version}").format(name=productName, version=productVersion)):
-					# Translators: This is the message announced when all information has been copied.
+				if api.copyToClip("{name} {version}".format(name=productName, version=productVersion)):
+					# Translators: This is the message announced when all information has been copied..
+					# {name} is the app name, {version} is the version.
 					message(_("Copied {name} {version} to the clipboard").format(
 						name=productName, version=productVersion
 					))
