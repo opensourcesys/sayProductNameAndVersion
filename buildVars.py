@@ -28,7 +28,7 @@ Default shortcut: Shift+NVDA+V"""),
 	# Author(s)
 	"addon_author" : "Patrick ZAJDA <patrick@zajda.fr>, Luke Davis <XLTechie@newanswertech.com>",
 	# URL for the add-on documentation support
-	"addon_url" : "https://addons.nvda-project.org",
+	"addon_url" : "https://github.com/opensourcesys/sayProductNameAndVersion#readme",
 	# URL for the add-on repository where the source code can be found
 	"addon_sourceURL": "https://github.com/opensourcesys/sayProductNameAndVersion",
 	# Documentation file name
