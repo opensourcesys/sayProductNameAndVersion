@@ -48,7 +48,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			else:
 				if api.copyToClip(_("{name} version {version}").format(name=productName, version=productVersion)):
 					# Translators: This is the message announced when all information has been copied.
-					message(_("{name} version {version} copied to the clipboard").format(
+					message(_("Copied {name} {version} to the clipboard").format(
 						name=productName, version=productVersion
 					))
 				else:
