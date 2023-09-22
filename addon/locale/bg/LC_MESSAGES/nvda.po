@@ -17,28 +17,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.2.2\n"
 
-#. Translators: Input help mode message for say product name and version command.
-msgid ""
-"Speaks the product name and version of the application which ownes the "
-"focused window. If pressed twice, copies this information to the clipboard"
-msgstr ""
-"Докладване на името на продукта и версията на приложението, чийто прозорец е "
-"на фокус в момента. При двукратно натискане, информацията бива копирана в "
-"клипборда"
-
 #. Translators: This is used when the name of the focused application cannot be found.
 msgid "Application"
 msgstr "Приложение"
 
-#. Translators: This is the message which will be spoken or copied to the clipboard.
+#. Translators: This is the message which will be spoken if the key is pressed once.
 #. {name} is the app name, {version} is the version.
 #, python-brace-format
 msgid "{name} version {version}"
 msgstr "{name} версия {version}"
 
-#. Translators: This is the message announced when all information has been copied.
-#, python-brace-format
-msgid "{name} version {version} copied to the clipboard"
+#. Translators: This is the message announced when all information has been copied..
+#. {name} is the app name, {version} is the version.
+#, fuzzy, python-brace-format
+msgid "Copied {name} {version} to the clipboard"
 msgstr "{name} версия {version} е копирано в клипборда"
 
 #. Translators: This is the message announced when all information hasn't been copied.
@@ -48,6 +40,15 @@ msgstr "Не може да се копира информацията за ве�
 #. Translators: this will be spoken if version information was not available.
 msgid "Unable to get version info"
 msgstr "Не може да се получи информация за версията"
+
+#. Translators: Input help mode message for say product name and version command.
+msgid ""
+"Speaks the product name and version of the application which ownes the "
+"focused window. If pressed twice, copies this information to the clipboard"
+msgstr ""
+"Докладване на името на продукта и версията на приложението, чийто прозорец е "
+"на фокус в момента. При двукратно натискане, информацията бива копирана в "
+"клипборда"
 
 #. Add-on summary
 #. Translators: Summary for this add-on to be shown on installation and add-on information.

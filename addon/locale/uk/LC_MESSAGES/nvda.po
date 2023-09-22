@@ -17,27 +17,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.2.2\n"
 
-#. Translators: Input help mode message for say product name and version command.
-msgid ""
-"Speaks the product name and version of the application which ownes the "
-"focused window. If pressed twice, copies this information to the clipboard"
-msgstr ""
-"Промовляє ім’я і версію застосунку, на вікні якого ви сфокусувались. При "
-"подвійному натисканні копіює цю інформацію в буфер обміну"
-
 #. Translators: This is used when the name of the focused application cannot be found.
 msgid "Application"
 msgstr "Застосунок"
 
-#. Translators: This is the message which will be spoken or copied to the clipboard.
+#. Translators: This is the message which will be spoken if the key is pressed once.
 #. {name} is the app name, {version} is the version.
 #, python-brace-format
 msgid "{name} version {version}"
 msgstr "{name} версія {version}"
 
-#. Translators: This is the message announced when all information has been copied.
-#, python-brace-format
-msgid "{name} version {version} copied to the clipboard"
+#. Translators: This is the message announced when all information has been copied..
+#. {name} is the app name, {version} is the version.
+#, fuzzy, python-brace-format
+msgid "Copied {name} {version} to the clipboard"
 msgstr "{name} версія {version} скопійовано в буфер обміну"
 
 #. Translators: This is the message announced when all information hasn't been copied.
@@ -47,6 +40,14 @@ msgstr "Не можу скопіювати інформацію про верс�
 #. Translators: this will be spoken if version information was not available.
 msgid "Unable to get version info"
 msgstr "Неможливо отримати інформацію про версію"
+
+#. Translators: Input help mode message for say product name and version command.
+msgid ""
+"Speaks the product name and version of the application which ownes the "
+"focused window. If pressed twice, copies this information to the clipboard"
+msgstr ""
+"Промовляє ім’я і версію застосунку, на вікні якого ви сфокусувались. При "
+"подвійному натисканні копіює цю інформацію в буфер обміну"
 
 #. Add-on summary
 #. Translators: Summary for this add-on to be shown on installation and add-on information.

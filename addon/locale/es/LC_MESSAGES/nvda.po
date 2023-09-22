@@ -17,28 +17,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.2.2\n"
 
-#. Translators: Input help mode message for say product name and version command.
-msgid ""
-"Speaks the product name and version of the application which ownes the "
-"focused window. If pressed twice, copies this information to the clipboard"
-msgstr ""
-"Verbaliza el nombre de producto y versión de la aplicación que posee la "
-"ventana que tiene el foco. Si se pulsa dos veces, copia esta información al "
-"portapapeles"
-
 #. Translators: This is used when the name of the focused application cannot be found.
 msgid "Application"
 msgstr "Aplicación"
 
-#. Translators: This is the message which will be spoken or copied to the clipboard.
+#. Translators: This is the message which will be spoken if the key is pressed once.
 #. {name} is the app name, {version} is the version.
 #, python-brace-format
 msgid "{name} version {version}"
 msgstr "{name} versión {version}"
 
-#. Translators: This is the message announced when all information has been copied.
-#, python-brace-format
-msgid "{name} version {version} copied to the clipboard"
+#. Translators: This is the message announced when all information has been copied..
+#. {name} is the app name, {version} is the version.
+#, fuzzy, python-brace-format
+msgid "Copied {name} {version} to the clipboard"
 msgstr "{name} versión {version} copiado al portapapeles"
 
 #. Translators: This is the message announced when all information hasn't been copied.
@@ -48,6 +40,15 @@ msgstr "No se puede copiar la información de versión al portapapeles."
 #. Translators: this will be spoken if version information was not available.
 msgid "Unable to get version info"
 msgstr "No se pudo obtener la información de versión"
+
+#. Translators: Input help mode message for say product name and version command.
+msgid ""
+"Speaks the product name and version of the application which ownes the "
+"focused window. If pressed twice, copies this information to the clipboard"
+msgstr ""
+"Verbaliza el nombre de producto y versión de la aplicación que posee la "
+"ventana que tiene el foco. Si se pulsa dos veces, copia esta información al "
+"portapapeles"
 
 #. Add-on summary
 #. Translators: Summary for this add-on to be shown on installation and add-on information.

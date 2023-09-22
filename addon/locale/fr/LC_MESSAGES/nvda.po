@@ -17,27 +17,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.8\n"
 
-#. Translators: Input help mode message for say product name and version command.
-msgid ""
-"Speaks the product name and version of the application which ownes the "
-"focused window. If pressed twice, copies this information to the clipboard"
-msgstr ""
-"Annoncer le nom et la version de l'application sous la fenêtre focalisée. "
-"Un double appui copie cette information dans le presse-papiers."
-
 #. Translators: This is used when the name of the focused application cannot be found.
 msgid "Application"
 msgstr "Application"
 
-#. Translators: This is the message which will be spoken or copied to the clipboard.
+#. Translators: This is the message which will be spoken if the key is pressed once.
 #. {name} is the app name, {version} is the version.
 #, python-brace-format
 msgid "{name} version {version}"
 msgstr "{name} version {version}"
 
-#. Translators: This is the message announced when all information has been copied.
-#, python-brace-format
-msgid "{name} version {version} copied to the clipboard"
+#. Translators: This is the message announced when all information has been copied..
+#. {name} is the app name, {version} is the version.
+#, fuzzy, python-brace-format
+msgid "Copied {name} {version} to the clipboard"
 msgstr "{name} version {version} copié dans le presse-papiers"
 
 #. Translators: This is the message announced when all information hasn't been copied.
@@ -48,6 +41,14 @@ msgstr ""
 #. Translators: this will be spoken if version information was not available.
 msgid "Unable to get version info"
 msgstr "Impossible d'obtenir l'information de version"
+
+#. Translators: Input help mode message for say product name and version command.
+msgid ""
+"Speaks the product name and version of the application which ownes the "
+"focused window. If pressed twice, copies this information to the clipboard"
+msgstr ""
+"Annoncer le nom et la version de l'application sous la fenêtre focalisée. Un "
+"double appui copie cette information dans le presse-papiers."
 
 #. Add-on summary
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -61,6 +62,5 @@ msgid ""
 "window.\n"
 "Default shortcut: Shift+NVDA+V"
 msgstr ""
-"Annoncer le nom et la version de l'application sous la fenêtre "
-"focalisée.\n"
+"Annoncer le nom et la version de l'application sous la fenêtre focalisée.\n"
 "Raccourci clavier par défaut : NVDA+maj+v"

@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sayProductNameAndVersion 2024.0.1\n"
+"Project-Id-Version: sayProductNameAndVersion 2021.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
-"POT-Creation-Date: 2023-09-16 10:08+0000\n"
-"PO-Revision-Date: 2023-09-18 23:02+0100\n"
+"POT-Creation-Date: 2021-08-17 08:33+0000\n"
+"PO-Revision-Date: 2023-07-28 14:48+0100\n"
 "Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
 "Language-Team: Equipa Portuguesa do NVDA: Ângelo Abrantes <ampa4374@gmail."
 "com> e Rui Fontes <Rui Fontes <rui.fontes@tiflotecnia.com> (21-08-2021)\n"
@@ -21,37 +21,31 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #. Translators: This is used when the name of the focused application cannot be found.
-#: addon/globalPlugins/sayProductNameAndVersion.py:41
 msgid "Application"
 msgstr "Aplicação"
 
 #. Translators: This is the message which will be spoken if the key is pressed once.
 #. {name} is the app name, {version} is the version.
-#: addon/globalPlugins/sayProductNameAndVersion.py:47
 #, python-brace-format
 msgid "{name} version {version}"
 msgstr "{name} versão {version}"
 
 #. Translators: This is the message announced when all information has been copied..
 #. {name} is the app name, {version} is the version.
-#: addon/globalPlugins/sayProductNameAndVersion.py:52
-#, python-brace-format
+#, fuzzy, python-brace-format
 msgid "Copied {name} {version} to the clipboard"
-msgstr "Copiado {name} {version} para a área de transferência"
+msgstr "{name} versão {version} copiada para a área de transferência"
 
 #. Translators: This is the message announced when all information hasn't been copied.
-#: addon/globalPlugins/sayProductNameAndVersion.py:57
 msgid "Cannot copy version information to the clipboard."
 msgstr ""
 "Não é possível copiar as informações da versão para a área de transferência."
 
 #. Translators: this will be spoken if version information was not available.
-#: addon/globalPlugins/sayProductNameAndVersion.py:60
 msgid "Unable to get version info"
 msgstr "Impossível obter informações sobre a versão"
 
 #. Translators: Input help mode message for say product name and version command.
-#: addon/globalPlugins/sayProductNameAndVersion.py:65
 msgid ""
 "Speaks the product name and version of the application which ownes the "
 "focused window. If pressed twice, copies this information to the clipboard"
@@ -61,13 +55,11 @@ msgstr ""
 
 #. Add-on summary
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
-#: buildVars.py:21
 msgid "Say Product Name and Version"
 msgstr "Informa o nome e a versão do produto"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-#: buildVars.py:24
 msgid ""
 "Say product name and version of the application which ownes the focused "
 "window.\n"
