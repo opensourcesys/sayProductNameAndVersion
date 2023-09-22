@@ -24,7 +24,7 @@ addon_info = {
 	"addon_description" : _("""Say product name and version of the application which ownes the focused window.
 Default shortcut: Shift+NVDA+V"""),
 	# version
-	"addon_version" : "2024.0.0",
+	"addon_version" : "2024.0.1",
 	# Author(s)
 	"addon_author" : "Patrick ZAJDA <patrick@zajda.fr>, Luke Davis <XLTechie@newanswertech.com>",
 	# URL for the add-on documentation support
@@ -36,7 +36,7 @@ Default shortcut: Shift+NVDA+V"""),
 	# Minimum NVDA version supported (e.g. "2018.3.0", minor version is optional)
 	"addon_minimumNVDAVersion" : "0.0.0", # Was 2017.3
 	# Last NVDA version supported/tested (e.g. "2018.4.0", ideally more recent than minimum version)
-	"addon_lastTestedNVDAVersion" : "2024.1",
+	"addon_lastTestedNVDAVersion" : "2023.3",
 	# Add-on update channel (default is None, denoting stable releases, and for development releases, use "dev"; do not change unless you know what you are doing)
 	"addon_updateChannel" : None,
 	# Add-on license such as GPL 2
