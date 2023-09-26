@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: sayProductNameAndVersion 2021.04\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2022-04-08 19:25+0000\n"
-"PO-Revision-Date: 2023-03-17 22:54+0200\n"
+"PO-Revision-Date: 2023-09-25 08:25+0300\n"
 "Last-Translator: Volodymyr Pyrih <vp88.mobile@gmail.com>\n"
 "Language-Team: \n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #. Translators: This is used when the name of the focused application cannot be found.
 msgid "Application"
@@ -29,9 +29,9 @@ msgstr "{name} версія {version}"
 
 #. Translators: This is the message announced when all information has been copied..
 #. {name} is the app name, {version} is the version.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Copied {name} {version} to the clipboard"
-msgstr "{name} версія {version} скопійовано в буфер обміну"
+msgstr "{name} {version} скопійовано в буфер обміну"
 
 #. Translators: This is the message announced when all information hasn't been copied.
 msgid "Cannot copy version information to the clipboard."
@@ -56,11 +56,10 @@ msgstr "Промовляння імені й версії продукту"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-#, fuzzy
 msgid ""
 "Say product name and version of the application which ownes the focused "
 "window.\n"
 "Default shortcut: Shift+NVDA+V"
 msgstr ""
 "Промовляє ім’я і версію застосунку, на вікні якого ви сфокусувались.\n"
-"Команда: Shift+NVDA+V"
+"Початкова комбінація: Shift+NVDA+V"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sayProductNameAndVersion\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-08-17 08:33+0000\n"
-"PO-Revision-Date: 2023-03-18 00:10+0200\n"
+"PO-Revision-Date: 2023-09-23 15:07+0200\n"
 "Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
 "Language-Team: fi_FI <janikinnunen340@gmail.com>\n"
 "Language: fi\n"
@@ -30,9 +30,9 @@ msgstr "{name}, versio {version}"
 
 #. Translators: This is the message announced when all information has been copied..
 #. {name} is the app name, {version} is the version.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Copied {name} {version} to the clipboard"
-msgstr "{name}, versio {version} kopioitu leikepöydälle"
+msgstr "Kopioitu {name} {version} leikepöydälle"
 
 #. Translators: This is the message announced when all information hasn't been copied.
 msgid "Cannot copy version information to the clipboard."

@@ -32,9 +32,7 @@ msgstr "{name} versão {version}"
 
 #. Translators: This is the message announced when all information has been copied..
 #. {name} is the app name, {version} is the version.
-
 #, fuzzy, python-brace-format
-
 msgid "Copied {name} {version} to the clipboard"
 msgstr "{name} versão {version} copiada para a área de transferência"
 
