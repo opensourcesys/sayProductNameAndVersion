@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: sayProductNameAndVersion 2021.04\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2022-04-08 19:25+0000\n"
-"PO-Revision-Date: 2022-06-19 04:10+0100\n"
+"PO-Revision-Date: 2023-10-11 15:53+0100\n"
 "Last-Translator: Nikola Jović <wwenikola123@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: Serbian NVDA team <wwenikola123@gmail.com>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,33 +21,35 @@ msgstr ""
 msgid "Application"
 msgstr "Aplikacija"
 
-#. Translators: This is the message which will be spoken or copied to the clipboard.
-#. {name} is the app name, {version} its the version.
+#. Translators: This is the message which will be spoken if the key is pressed once.
+#. {name} is the app name, {version} is the version.
 #, python-brace-format
 msgid "{name} version {version}"
 msgstr "{name} verzija {version}"
 
-#. Translators: This is the message announced when all informations has been copied.
+#. Translators: This is the message announced when all information has been copied..
+#. {name} is the app name, {version} is the version.
 #, python-brace-format
-msgid "{name} version {version} copied to the clipboard"
-msgstr "{name} verzija {version} kopirano u privremenu memoriju"
+msgid "Copied {name} {version} to the clipboard"
+msgstr "Kopirano {name} {version} u privremenu memoriju"
 
-#. Translators: This is the message announced when all informations hasn't been copied.
-msgid "Cannot copy version informations to the clipboard."
+#. Translators: This is the message announced when all information hasn't been copied.
+msgid "Cannot copy version information to the clipboard."
 msgstr "Nemoguće kopirati informacije o verziji u privremenu memoriju."
 
-#. Translators: this will be spoken if version informations were not available.
+#. Translators: this will be spoken if version information was not available.
 msgid "Unable to get version info"
 msgstr "Nemoguće preuzeti informacije o verziji"
 
+#. Translators: Input help mode message for say product name and version command.
 msgid ""
-"Say product name and version of the application which ownes the focused "
-"window. If pressed twice, copy these information to the clipboard"
+"Speaks the product name and version of the application which ownes the "
+"focused window. If pressed twice, copies this information to the clipboard"
 msgstr ""
 "Izgovara ime i verziju aplikacije čiji prozor je fokusiran. Ako se pritisne "
-"dva puta, kopira ove informacije u privremenu memoriju."
+"dva puta, kopira ove informacije u privremenu memoriju"
 
-#. Add-on description
+#. Add-on summary
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Say Product Name and Version"
 msgstr "Izgovor imena i verzije aplikacije"
@@ -57,7 +59,7 @@ msgstr "Izgovor imena i verzije aplikacije"
 msgid ""
 "Say product name and version of the application which ownes the focused "
 "window.\n"
-"Shortcut: Shift+NVDA+V"
+"Default shortcut: Shift+NVDA+V"
 msgstr ""
 "Izgovara ime i verziju aplikacije čiji prozor je fokusiran.\n"
-"Prečica: Šift+NVDA+V"
+"Podrazumevana prečica: Šift+NVDA+V"

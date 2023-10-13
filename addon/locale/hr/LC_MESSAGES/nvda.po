@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sayProductNameAndVersion 2021.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-08-17 08:33+0000\n"
-"PO-Revision-Date: 2023-03-18 16:38+0100\n"
+"PO-Revision-Date: 2023-10-09 15:33+0200\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: \n"
 "Language: hr\n"
@@ -29,9 +29,9 @@ msgstr "{name} verzija {version}"
 
 #. Translators: This is the message announced when all information has been copied..
 #. {name} is the app name, {version} is the version.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Copied {name} {version} to the clipboard"
-msgstr "{name} verzija {version} kopirana u međuspremnik"
+msgstr "{name} {version} je kopirano u međuspremnik"
 
 #. Translators: This is the message announced when all information hasn't been copied.
 msgid "Cannot copy version information to the clipboard."
