@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sayProductNameAndVersion 2021.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-08-17 08:33+0000\n"
-"PO-Revision-Date: 2023-07-28 14:48+0100\n"
+"PO-Revision-Date: 2023-12-01 23:16+0000\n"
 "Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
 "Language-Team: Equipa Portuguesa do NVDA: Ângelo Abrantes <ampa4374@gmail."
 "com> e Rui Fontes <Rui Fontes <rui.fontes@tiflotecnia.com> (21-08-2021)\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4.1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #. Translators: This is used when the name of the focused application cannot be found.
@@ -32,9 +32,9 @@ msgstr "{name} versão {version}"
 
 #. Translators: This is the message announced when all information has been copied..
 #. {name} is the app name, {version} is the version.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Copied {name} {version} to the clipboard"
-msgstr "{name} versão {version} copiada para a área de transferência"
+msgstr "Copiado {name} {version} para a área de transferência"
 
 #. Translators: This is the message announced when all information hasn't been copied.
 msgid "Cannot copy version information to the clipboard."
