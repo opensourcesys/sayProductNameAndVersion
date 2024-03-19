@@ -2,6 +2,11 @@
 
 Note: translation-only releases are not included here.
 
+### 2024.1.0
+
+* Added the feature: press three times to copy only version.
+* Refactored the code by breaking the main script out into specific purpose methods.
+
 ### 2023.3.4
 
 * Bug fix release, followup of PR #3: fully restores NVDA 2017.3 support by ending use of @script. The decorator didn't become part of NVDA until 2018.3.
