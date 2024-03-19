@@ -1,12 +1,10 @@
 # -*- coding: utf-8 -*-
 # Name and version Info Of Current program announcement Global Plugin for NVDA
-# Copyright (C) 2023 Luke Davis <XLTechie@newanswertech.com>
+# Copyright (C) 2024 Luke Davis <XLTechie@newanswertech.com>
 # Original author copyright (C) 2014-2023 Patrick ZAJDA <patrick@zajda.fr>
-# This file is covered by the GNU General Public License.
+# This file is covered by the GNU General Public License version 2.
 # You can read the licence by clicking Help->Licence in the NVDA menu
 # or by visiting http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-# Shortcut: NVDA+Shift+V
-# Press it twice to copy version information to the clipboard
 
 import addonHandler
 import globalPluginHandler
@@ -28,41 +26,65 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_sayProductNameAndVersion(self, gesture):
 		focus = api.getFocusObject()
 		try:
-			productName = focus.appModule.productName
+			self.productName = focus.appModule.productName
 		except Exception:
-			productName = ""
+			self.productName = ""
 		try:
-			productVersion = focus.appModule.productVersion
+			self.productVersion = focus.appModule.productVersion
 		except Exception:
-			productVersion = ""
+			self.productVersion = ""
 
-		if productName == "":
+		if self.productName == "":
 			# Translators: This is used when the name of the focused application cannot be found.
-			productName = _("Application")
-		if productName != "" and productVersion != "":
-			isSameScript = getLastScriptRepeatCount()
-			if isSameScript == 0:
-				# Translators: This is the message which will be spoken if the key is pressed once.
-				# {name} is the app name, {version} is the version.
-				message(_("{name} version {version}").format(name=productName, version=productVersion))
-			else:
-				if api.copyToClip("{name} {version}".format(name=productName, version=productVersion)):
-					# Translators: This is the message announced when all information has been copied..
-					# {name} is the app name, {version} is the version.
-					message(_("Copied {name} {version} to the clipboard").format(
-						name=productName, version=productVersion
-					))
-				else:
-					# Translators: This is the message announced when all information hasn't been copied.
-					message(_("Cannot copy version information to the clipboard."))
+			self.productName = _("Application")
+		if self.productName != "" and self.productVersion != "":
+			pressCount = getLastScriptRepeatCount()
+			if pressCount == 0:
+				self.sayBoth()
+			elif pressCount == 1:
+				self.copyBoth()
+			else:  # pressCount > 1
+				self.copyVersion()
 		else:
 			# Translators: this will be spoken if version information was not available.
 			message(_("Unable to get version info"))
 
+	def sayBoth(self):
+		"""Speaks the product name and version."""
+		# Translators: This is the message which will be spoken containing both the product name and version.
+		# {name} is the app name, {version} is the version.
+		message(_("{name} version {version}").format(name=self.productName, version=self.productVersion))
+
+	def copyBoth(self):
+		"""Attempts to copy the product name and version to the clipboard."""
+		if api.copyToClip("{name} {version}".format(name=self.productName, version=self.productVersion)):
+			# Translators: This is the message announced when all information has been copied..
+			# {name} is the app name, {version} is the version.
+			message(_("Copied {name} {version} to the clipboard").format(
+				name=self.productName,
+				version=self.productVersion
+			))
+		else:
+			# Translators: This is the message announced when all information hasn't been copied.
+			message(_("Cannot copy version information to the clipboard."))
+
+	def copyVersion(self):
+		"""Attempts to copy the product version to the clipboard."""
+		if api.copyToClip(self.productVersion):
+			# Translators: This is the message announced when only the version has been copied..
+			# {version} is the version.
+			message(_("Copied {version} to the clipboard.").format(
+				version=self.productVersion
+			))
+		else:
+			# Translators: This is the message announced when all information hasn't been copied.
+			message(_("Cannot copy version information to the clipboard."))
+
 	script_sayProductNameAndVersion.category = SCRCAT_TOOLS
 	script_sayProductNameAndVersion.__doc__ = _(
 		# Translators: Input help mode message for say product name and version command.
-		"Speaks the product name and version of the application which ownes the focused window."
-		" If pressed twice, copies this information to the clipboard"
+		"Speaks the name and version of the application on which you are focused."
+		" Press twice to copy the information to the clipboard."
+		" Press three times to copy only the version number."
 	)
 	__gestures = { "kb:NVDA+Shift+v": "sayProductNameAndVersion" }
