@@ -21,12 +21,15 @@ addon_info = {
 	"addon_summary" : _("Say Product Name and Version"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-	"addon_description" : _("""Say product name and version of the application which ownes the focused window.
-Default shortcut: Shift+NVDA+V"""),
+	"addon_description" : _("""Speak the name and version of the application you are currently focused on, by pressing NVDA+Shift+v.
+Pressing twice will copy this information to the clipboard, to paste in bug reports, etc.
+Pressing three times copies only the version.
+The key can be remapped.
+Read help to find tips for hearing NVDA and Windows versions."""),
 	# version
-	"addon_version" : "2024.0.4",
+	"addon_version" : "2024.0.205",
 	# Author(s)
-	"addon_author" : "Patrick ZAJDA <patrick@zajda.fr>, Luke Davis <XLTechie@newanswertech.com>",
+	"addon_author" : "Luke Davis <XLTechie@newanswertech.com>, Patrick ZAJDA <patrick@zajda.fr>",
 	# URL for the add-on documentation support
 	"addon_url" : "https://github.com/opensourcesys/sayProductNameAndVersion#readme",
 	# URL for the add-on repository where the source code can be found
@@ -36,9 +39,9 @@ Default shortcut: Shift+NVDA+V"""),
 	# Minimum NVDA version supported (e.g. "2018.3.0", minor version is optional)
 	"addon_minimumNVDAVersion" : "0.0.0", # Was 2017.3
 	# Last NVDA version supported/tested (e.g. "2018.4.0", ideally more recent than minimum version)
-	"addon_lastTestedNVDAVersion" : "2023.3",
+	"addon_lastTestedNVDAVersion" : "2024.1",
 	# Add-on update channel (default is None, denoting stable releases, and for development releases, use "dev"; do not change unless you know what you are doing)
-	"addon_updateChannel" : None,
+	"addon_updateChannel" : "dev",
 	# Add-on license such as GPL 2
 	"addon_license": "GPL V2",
 	# URL for the license document the ad-on is licensed under
