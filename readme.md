@@ -10,6 +10,8 @@ This [NVDA](https://nvaccess.org/) add-on adds a shortcut to announce product na
 
 This shortcut may be remapped in the Tools category of NVDA's Input Gestures.
 
+If you like this add-on and are willing to help others decide whether it is useful, please leave a [review][3].
+
 For change history, please read the [changelog][2].
 
 ### Tips
@@ -20,3 +22,5 @@ For change history, please read the [changelog][2].
 [1]: https://www.nvaccess.org/addonStore/legacy?file=sayProductNameAndVersion
 
 [2]: https://github.com/opensourcesys/sayProductNameAndVersion/blob/master/changelog.md#readme
+
+[3]: https://github.com/nvaccess/addon-datastore/discussions/2683
