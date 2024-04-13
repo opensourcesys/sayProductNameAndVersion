@@ -8,20 +8,24 @@ msgstr ""
 "Project-Id-Version: sayProductNameAndVersion 2021.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-08-17 08:33+0000\n"
-"PO-Revision-Date: 2023-09-23 18:15+0200\n"
+"PO-Revision-Date: 2024-03-22 21:02+0100\n"
 "Last-Translator: José Manuel Delicado <jm.delicado@nvda.es>\n"
 "Language-Team: \n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #. Translators: This is used when the name of the focused application cannot be found.
 msgid "Application"
 msgstr "Aplicación"
 
-#. Translators: This is the message which will be spoken if the key is pressed once.
+#. Translators: this will be spoken if version information was not available.
+msgid "Unable to get version info"
+msgstr "No se pudo obtener la información de versión"
+
+#. Translators: This is the message which will be spoken containing both the product name and version.
 #. {name} is the app name, {version} is the version.
 #, python-brace-format
 msgid "{name} version {version}"
@@ -37,18 +41,21 @@ msgstr "Copiado {name} {version} al portapapeles"
 msgid "Cannot copy version information to the clipboard."
 msgstr "No se puede copiar la información de versión al portapapeles."
 
-#. Translators: this will be spoken if version information was not available.
-msgid "Unable to get version info"
-msgstr "No se pudo obtener la información de versión"
+#. Translators: This is the message announced when only the version has been copied..
+#. {version} is the version.
+#, python-brace-format
+msgid "Copied {version} to the clipboard."
+msgstr "Copiada {version} al portapapeles."
 
 #. Translators: Input help mode message for say product name and version command.
 msgid ""
-"Speaks the product name and version of the application which ownes the "
-"focused window. If pressed twice, copies this information to the clipboard"
+"Speaks the name and version of the application on which you are focused. "
+"Press twice to copy the information to the clipboard. Press three times to "
+"copy only the version number."
 msgstr ""
 "Verbaliza el nombre de producto y versión de la aplicación que posee la "
 "ventana que tiene el foco. Si se pulsa dos veces, copia esta información al "
-"portapapeles"
+"portapapeles. Si se pulsa tres veces, copia sólo el número de versión."
 
 #. Add-on summary
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -58,10 +65,19 @@ msgstr "Decir nombre de producto y versión"
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
-"Say product name and version of the application which ownes the focused "
-"window.\n"
-"Default shortcut: Shift+NVDA+V"
+"Speak the name and version of the application you are currently focused on, "
+"by pressing NVDA+Shift+v.\n"
+"Pressing twice will copy this information to the clipboard, to paste in bug "
+"reports, etc.\n"
+"Pressing three times copies only the version.\n"
+"The key can be remapped.\n"
+"Read help to find tips for hearing NVDA and Windows versions."
 msgstr ""
-"Verbaliza el nombre de producto y versión de la aplicación que posee la "
-"ventana que tiene el foco.\n"
-"Atajo por defecto: shift+NVDA+V"
+"Verbaliza el nombre y versión de la aplicación en la que te encuentras "
+"pulsando NVDA+shift+v.\n"
+"Si se pulsa dos veces, copia esta información al portapapeles, para pegarla "
+"en informes de fallos, etc.\n"
+"Pulsando tres veces se copia sólo la versión.\n"
+"Se puede reasignar el atajo.\n"
+"Lee la ayuda para descubrir consejos sobre cómo oír las versiones de "
+"Windows y NVDA."

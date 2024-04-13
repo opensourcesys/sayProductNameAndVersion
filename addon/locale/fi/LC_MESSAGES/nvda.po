@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sayProductNameAndVersion\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-08-17 08:33+0000\n"
-"PO-Revision-Date: 2023-09-23 15:07+0200\n"
+"PO-Revision-Date: 2024-03-23 15:49+0200\n"
 "Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
 "Language-Team: fi_FI <janikinnunen340@gmail.com>\n"
 "Language: fi\n"
@@ -16,13 +16,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.11\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #. Translators: This is used when the name of the focused application cannot be found.
 msgid "Application"
 msgstr "Sovellus"
 
-#. Translators: This is the message which will be spoken if the key is pressed once.
+#. Translators: this will be spoken if version information was not available.
+msgid "Unable to get version info"
+msgstr "Versiotietoja ei ole saatavilla"
+
+#. Translators: This is the message which will be spoken containing both the product name and version.
 #. {name} is the app name, {version} is the version.
 #, python-brace-format
 msgid "{name} version {version}"
@@ -38,17 +42,21 @@ msgstr "Kopioitu {name} {version} leikepöydälle"
 msgid "Cannot copy version information to the clipboard."
 msgstr "Versiotietoja ei voi kopioida leikepöydälle."
 
-#. Translators: this will be spoken if version information was not available.
-msgid "Unable to get version info"
-msgstr "Versiotietoja ei ole saatavilla"
+#. Translators: This is the message announced when only the version has been copied..
+#. {version} is the version.
+#, python-brace-format
+msgid "Copied {version} to the clipboard."
+msgstr "Kopioitu {version} leikepöydälle."
 
 #. Translators: Input help mode message for say product name and version command.
 msgid ""
-"Speaks the product name and version of the application which ownes the "
-"focused window. If pressed twice, copies this information to the clipboard"
+"Speaks the name and version of the application on which you are focused. "
+"Press twice to copy the information to the clipboard. Press three times to "
+"copy only the version number."
 msgstr ""
-"Puhuu aktiivisen sovelluksen tuotenimen ja version. Kahdesti painettaessa "
-"tiedot kopioidaan leikepöydälle."
+"Puhuu aktiivisen sovelluksen tuotenimen ja version. Paina kahdesti "
+"kopioidaksesi tiedot leikepöydälle. Paina kolmesti kopioidaksesi vain "
+"versionumeron."
 
 #. Add-on summary
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -58,9 +66,25 @@ msgstr "Sano tuotenimi ja versio"
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
-"Say product name and version of the application which ownes the focused "
-"window.\n"
-"Default shortcut: Shift+NVDA+V"
+"Speak the name and version of the application you are currently focused on, "
+"by pressing NVDA+Shift+v.\n"
+"Pressing twice will copy this information to the clipboard, to paste in bug "
+"reports, etc.\n"
+"Pressing three times copies only the version.\n"
+"The key can be remapped.\n"
+"Read help to find tips for hearing NVDA and Windows versions."
 msgstr ""
-"Sanoo aktiivisen sovelluksen tuotenimen ja version.\n"
-"Oletuspikanäppäin: NVDA+Vaihto+V"
+"Puhu aktiivisen sovelluksen nimi ja versio painamalla NVDA+Vaihto+V.\n"
+"Kahdesti painettaessa tiedot kopioidaan leikepöydälle, jotta voit liittää "
+"tiedot virheraportteihin jne.\n"
+"Kolmesti painettaessa kopioidaan vain versionumero.\n"
+"Näppäinkomennon uudelleenmäärittäminen on mahdollista.\n"
+"Lue ohjeet saadaksesi vinkkejä NVDA- ja Windowsin versioiden kuulemiseen."
+
+#~ msgid ""
+#~ "Say product name and version of the application which ownes the focused "
+#~ "window.\n"
+#~ "Default shortcut: Shift+NVDA+V"
+#~ msgstr ""
+#~ "Sanoo aktiivisen sovelluksen tuotenimen ja version.\n"
+#~ "Oletuspikanäppäin: NVDA+Vaihto+V"

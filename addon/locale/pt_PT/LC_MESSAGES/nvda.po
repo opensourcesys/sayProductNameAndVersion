@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sayProductNameAndVersion 2021.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-08-17 08:33+0000\n"
-"PO-Revision-Date: 2023-12-01 23:16+0000\n"
+"PO-Revision-Date: 2024-03-28 19:13+0000\n"
 "Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
 "Language-Team: Equipa Portuguesa do NVDA: Ângelo Abrantes <ampa4374@gmail."
 "com> e Rui Fontes <Rui Fontes <rui.fontes@tiflotecnia.com> (21-08-2021)\n"
@@ -17,14 +17,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.4.1\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #. Translators: This is used when the name of the focused application cannot be found.
 msgid "Application"
 msgstr "Aplicação"
 
-#. Translators: This is the message which will be spoken if the key is pressed once.
+#. Translators: this will be spoken if version information was not available.
+msgid "Unable to get version info"
+msgstr "Impossível obter informações sobre a versão"
+
+#. Translators: This is the message which will be spoken containing both the product name and version.
 #. {name} is the app name, {version} is the version.
 #, python-brace-format
 msgid "{name} version {version}"
@@ -41,17 +45,21 @@ msgid "Cannot copy version information to the clipboard."
 msgstr ""
 "Não é possível copiar as informações da versão para a área de transferência."
 
-#. Translators: this will be spoken if version information was not available.
-msgid "Unable to get version info"
-msgstr "Impossível obter informações sobre a versão"
+#. Translators: This is the message announced when only the version has been copied..
+#. {version} is the version.
+#, python-brace-format
+msgid "Copied {version} to the clipboard."
+msgstr "{version} Copiada para a área de transferência."
 
 #. Translators: Input help mode message for say product name and version command.
 msgid ""
-"Speaks the product name and version of the application which ownes the "
-"focused window. If pressed twice, copies this information to the clipboard"
+"Speaks the name and version of the application on which you are focused. "
+"Press twice to copy the information to the clipboard. Press three times to "
+"copy only the version number."
 msgstr ""
-"Diz o nome do produto e a versão da aplicação que possui a janela focada. Se "
-"premido duas vezes, copia esta informação para a área de transferência"
+"Diz o nome e a versão da aplicação em que está focado. Prima duas vezes para "
+"copiar as informações para a área de transferência. Prima três vezes para "
+"copiar apenas o número da versão."
 
 #. Add-on summary
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -61,9 +69,27 @@ msgstr "Informa o nome e a versão do produto"
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
-"Say product name and version of the application which ownes the focused "
-"window.\n"
-"Default shortcut: Shift+NVDA+V"
+"Speak the name and version of the application you are currently focused on, "
+"by pressing NVDA+Shift+v.\n"
+"Pressing twice will copy this information to the clipboard, to paste in bug "
+"reports, etc.\n"
+"Pressing three times copies only the version.\n"
+"The key can be remapped.\n"
+"Read help to find tips for hearing NVDA and Windows versions."
 msgstr ""
-"Dizer o nome do produto e a versão da aplicação que detém a janela focada.\n"
-"Atalho predefinido: Shift+NVDA+V"
+"Diga o nome e a versão da aplicação em que está atualmente concentrado, "
+"premindo NVDA+Shift+v.\n"
+"Premir duas vezes copia esta informação para a área de transferência, para "
+"colar em relatórios de erros, etc.\n"
+"Se premir três vezes, copia apenas a versão.\n"
+"A tecla pode ser remapeada.\n"
+"Leia a ajuda para encontrar dicas para ouvir as versões do NVDA e do Windows."
+
+#~ msgid ""
+#~ "Say product name and version of the application which ownes the focused "
+#~ "window.\n"
+#~ "Default shortcut: Shift+NVDA+V"
+#~ msgstr ""
+#~ "Dizer o nome do produto e a versão da aplicação que detém a janela "
+#~ "focada.\n"
+#~ "Atalho predefinido: Shift+NVDA+V"
