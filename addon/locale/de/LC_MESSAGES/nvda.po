@@ -8,20 +8,24 @@ msgstr ""
 "Project-Id-Version: sayProductNameAndVersion 2021.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-08-17 08:33+0000\n"
-"PO-Revision-Date: 2023-09-23 08:33+0200\n"
+"PO-Revision-Date: 2024-04-29 02:00+0200\n"
 "Last-Translator: René Linke <rene.linke@hamburg.de>\n"
 "Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #. Translators: This is used when the name of the focused application cannot be found.
 msgid "Application"
 msgstr "Anwendung"
 
-#. Translators: This is the message which will be spoken if the key is pressed once.
+#. Translators: this will be spoken if version information was not available.
+msgid "Unable to get version info"
+msgstr "Keine Informationen zur Version gefunden"
+
+#. Translators: This is the message which will be spoken containing both the product name and version.
 #. {name} is the app name, {version} is the version.
 #, python-brace-format
 msgid "{name} version {version}"
@@ -38,18 +42,21 @@ msgid "Cannot copy version information to the clipboard."
 msgstr ""
 "Die Versionsinformationen konnten nicht in die Zwischenablage kopiert werden."
 
-#. Translators: this will be spoken if version information was not available.
-msgid "Unable to get version info"
-msgstr "Keine Versionsinformationen gefunden"
+#. Translators: This is the message announced when only the version has been copied..
+#. {version} is the version.
+#, python-brace-format
+msgid "Copied {version} to the clipboard."
+msgstr "Kopiert {version} in die Zwischenablage."
 
 #. Translators: Input help mode message for say product name and version command.
 msgid ""
-"Speaks the product name and version of the application which ownes the "
-"focused window. If pressed twice, copies this information to the clipboard"
+"Speaks the name and version of the application on which you are focused. "
+"Press twice to copy the information to the clipboard. Press three times to "
+"copy only the version number."
 msgstr ""
-"Teilt den Namen und die Version der Anwendung mit, die das fokussierte "
-"Fenster besitzt. Bei zweimaligem Drücken werden diese Informationen in die "
-"Zwischenablage kopiert"
+"Teilt den Namen und die Version der fokussierten Anwendung mit. Bei "
+"zweimaligem Drücken werden die Informationen und bei dreimaligem Drücken "
+"wird nur die Versionsnummer in die Zwischenablage kopiert."
 
 #. Add-on summary
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -59,10 +66,28 @@ msgstr "Name und Version der Anwendung mitteilen"
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
-"Say product name and version of the application which ownes the focused "
-"window.\n"
-"Default shortcut: Shift+NVDA+V"
+"Speak the name and version of the application you are currently focused on, "
+"by pressing NVDA+Shift+v.\n"
+"Pressing twice will copy this information to the clipboard, to paste in bug "
+"reports, etc.\n"
+"Pressing three times copies only the version.\n"
+"The key can be remapped.\n"
+"Read help to find tips for hearing NVDA and Windows versions."
 msgstr ""
-"Teilt den Namen und die Version der Anwendung mit, die das fokussierte "
-"Fenster besitzt.\n"
-"Standardkürzel: Umschalt+NVDA+V"
+"Teilt den Namen und die Version der fokussierten Anwendung mit, indem Sie "
+"NVDA+Umschalt+V drücken.\n"
+"Bei zweimaligem drücken werden diese Informationen in die Zwischenablage "
+"kopiert, um sie in Fehlerberichte, etc. einzufügen.\n"
+"Bei dreimaligem Drücken wird nur die Versionsnummer in die Zwischenablage "
+"kopiert.\n"
+"Die Tastenkombination kann bei Bedarf geändert werden.\n"
+"In der Hilfe finden Sie Tipps zum Hören von NVDA- und Windows-Versionen."
+
+#~ msgid ""
+#~ "Say product name and version of the application which ownes the focused "
+#~ "window.\n"
+#~ "Default shortcut: Shift+NVDA+V"
+#~ msgstr ""
+#~ "Teilt den Namen und die Version der Anwendung mit, die das fokussierte "
+#~ "Fenster besitzt.\n"
+#~ "Standardkürzel: Umschalt+NVDA+V"
