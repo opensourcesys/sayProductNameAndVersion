@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 'sayProductNameAndVersion' '2021.04'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2022-05-21 19:18+0400\n"
-"PO-Revision-Date: 2022-05-21 19:25+0400\n"
+"PO-Revision-Date: 2024-05-07 17:54+0300\n"
 "Last-Translator: Dragan Ratkovich\n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -17,40 +17,49 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #. Translators: This is used when the name of the focused application cannot be found.
 msgid "Application"
 msgstr "Приложение"
 
-#. Translators: This is the message which will be spoken or copied to the clipboard.
-#. {name} is the app name, {version} its the version.
+#. Translators: this will be spoken if version information was not available.
+msgid "Unable to get version info"
+msgstr "Не удалось получить информацию о версии"
+
+#. Translators: This is the message which will be spoken containing both the product name and version.
+#. {name} is the app name, {version} is the version.
 #, python-brace-format
 msgid "{name} version {version}"
 msgstr "{name} версия {version}"
 
-#. Translators: This is the message announced when all informations has been copied.
+#. Translators: This is the message announced when all information has been copied..
+#. {name} is the app name, {version} is the version.
 #, python-brace-format
-msgid "{name} version {version} copied to the clipboard"
+msgid "Copied {name} {version} to the clipboard"
 msgstr "{name} версия {version} скопировано в буфер обмена"
 
-#. Translators: This is the message announced when all informations hasn't been copied.
-msgid "Cannot copy version informations to the clipboard."
-msgstr "Не удается скопировать информацию о версии в буфер обмена."
+#. Translators: This is the message announced when all information hasn't been copied.
+msgid "Cannot copy version information to the clipboard."
+msgstr "Не удаётся скопировать информацию о версии в буфер обмена."
 
-#. Translators: this will be spoken if version informations were not available.
-msgid "Unable to get version info"
-msgstr "Не удалось получить информацию о версии"
+#. Translators: This is the message announced when only the version has been copied..
+#. {version} is the version.
+#, python-brace-format
+msgid "Copied {version} to the clipboard."
+msgstr "Версия {version} скопировано в буфер обмена."
 
+#. Translators: Input help mode message for say product name and version command.
 msgid ""
-"Say product name and version of the application which ownes the focused "
-"window. If pressed twice, copy these information to the clipboard"
+"Speaks the name and version of the application on which you are focused. "
+"Press twice to copy the information to the clipboard. Press three times to "
+"copy only the version number."
 msgstr ""
-"Объявляет имя продукта и версию приложения, которому принадлежит "
-"выделенное окно. При двойном нажатии копирует эту информацию в буфер "
-"обмена"
+"Объявляет название и версию приложения, которому принадлежит выделенное "
+"окно. При двойном нажатии копирует эту информацию в буфер обмена. При "
+"тройном нажатии копирует только номер версии."
 
-#. Add-on description
+#. Add-on summary
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Say Product Name and Version"
 msgstr "Объявить название и версию продукта"
@@ -58,10 +67,29 @@ msgstr "Объявить название и версию продукта"
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
-"Say product name and version of the application which ownes the focused "
-"window.\n"
-"Shortcut: Shift+NVDA+V"
+"Speak the name and version of the application you are currently focused on, "
+"by pressing NVDA+Shift+v.\n"
+"Pressing twice will copy this information to the clipboard, to paste in bug "
+"reports, etc.\n"
+"Pressing three times copies only the version.\n"
+"The key can be remapped.\n"
+"Read help to find tips for hearing NVDA and Windows versions."
 msgstr ""
-"Объявляет имя продукта и версию приложения, которому принадлежит "
-"выделенное окно.\n"
-"Горячая клавиша: Shift+NVDA+V"
+"Произносит название и версию приложения, на котором вы в данный момент "
+"работаете, по нажатию NVDA+Shift+v.\n"
+"При двойном нажатии эта информация будет скопирована в буфер обмена для "
+"вставки в сообщения об ошибках и т.д.\n"
+"При тройном нажатии будет скопирована только версия приложения.\n"
+"Клавишу можно переназначить.\n"
+"Ознакомьтесь со справкой, чтобы найти советы по прослушиванию версий NVDA и "
+"Windows."
+
+#, fuzzy
+#~ msgid ""
+#~ "Say product name and version of the application which ownes the focused "
+#~ "window.\n"
+#~ "Default shortcut: Shift+NVDA+V"
+#~ msgstr ""
+#~ "Объявляет имя продукта и версию приложения, которому принадлежит "
+#~ "выделенное окно.\n"
+#~ "Горячая клавиша: Shift+NVDA+V"

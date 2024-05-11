@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sayProductNameAndVersion 2021.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-08-17 08:33+0000\n"
-"PO-Revision-Date: 2024-03-22 22:11+0200\n"
+"PO-Revision-Date: 2024-05-03 17:14+0300\n"
 "Last-Translator: Kostadin Kolev <k.kolev1985@gmail.com>\n"
 "Language-Team: \n"
 "Language: bg\n"
@@ -60,7 +60,8 @@ msgstr ""
 #. Add-on summary
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Say Product Name and Version"
-msgstr "Докладване на името и версията на продукта"
+msgstr ""
+"Докладване на името и версията на продукта (Say Product Name and Version)"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager

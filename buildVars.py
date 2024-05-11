@@ -27,7 +27,7 @@ Pressing three times copies only the version.
 The key can be remapped.
 Read help to find tips for hearing NVDA and Windows versions."""),
 	# version
-	"addon_version" : "2024.1.502",
+	"addon_version" : "2024.1.503",
 	# Author(s)
 	"addon_author" : "Luke Davis <XLTechie@newanswertech.com>, Patrick ZAJDA <patrick@zajda.fr>",
 	# URL for the add-on documentation support
