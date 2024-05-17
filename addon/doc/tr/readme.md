@@ -1,4 +1,4 @@
-# Ürün Ad ve Sürümünü Söyle #
+# Ürün Adı ve Sürümünü Söyle #
 
 * Yazarlar: Luke Davis <XLTechie@newanswertech.com>, Patrick ZAJDA
   <patrick@zajda.fr>
