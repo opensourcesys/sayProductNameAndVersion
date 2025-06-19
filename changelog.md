@@ -1,6 +1,12 @@
-### Changelog
+## Changelog
 
 Note: translation-only releases are not included here.
+
+### 2025.1.0
+
+* Compatibility with NVDA 2025.x. No code changes.
+* Update build system to build with Python 3.11. No code changes.
+* Other build system changes to compensate for GitHub weirdness, such as broken caching.
 
 ### 2024.1.0
 

@@ -1,10 +1,10 @@
 * Author: Luke Davis <XLTechie@newanswertech.com>, Patrick ZAJDA <patrick@zajda.fr>
-* NVDA compatibility: 2017.3 through 2024.X
+* NVDA compatibility: 2017.3 through 2025.X
 * Download [stable version][1]
 
 This [NVDA](https://nvaccess.org/) add-on adds a shortcut to announce product name and version of the foreground application, or copies this information to the clipboard.
 
-* Shortcut: `NVDA+shift+v`
+* English shortcut: `NVDA+shift+v`
 * Press it twice to copy product name and version to the clipboard.
 * Press it three times to copy only the version to the clipboard.
 
