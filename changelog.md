@@ -2,6 +2,10 @@
 
 Note: translation-only releases, and never released versions, are not included here.
 
+### 2026.2.0
+
+* Added reporting of app architecture as part of the version number.
+
 ### 2026.1.5
 
 * Logic tightening for error handling.

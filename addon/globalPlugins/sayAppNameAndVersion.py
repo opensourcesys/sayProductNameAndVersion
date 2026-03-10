@@ -27,6 +27,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		focus = api.getFocusObject()
 		appName: Optional[str] = None
 		appVersion: str = ""
+		appArch: Optional[str] = None
 
 		try:
 			appName = focus.appModule.productName
@@ -44,35 +45,48 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Translators: This is used when the version of the focused application cannot be found.
 			appVersion = _("not detected")
 
+		try:
+			appArch: Optional[str] = focus.appModule.appArchitecture
+			if appArch is None or appArch == "":  # If the retrieved version is invalid
+				raise ValueErrorException
+			else:
+				appVersionAndArch: str = "{version} ({arch})".format(version=appVersion, arch=appArch)
+		except Exception as e:
+			appVersionAndArch: str = appVersion
+			appArch: Optional[str] = None
+
 		pressCount = getLastScriptRepeatCount()
 
 		if pressCount == 0:
-			# Outputs the application name and version
+			# Outputs the application name, version, and architecture (if set)
 			ui.message(_(
-				# Translators: This is the message which will be spoken containing both the application's name and version.
-				"{name} version {version}"
-			).format(name=appName, version=appVersion))
+				# Translators: The message which reports the application's name, version, & architecture.
+				"{name}, version {versionAndArch}"
+			).format(name=appName, versionAndArch=appVersionAndArch))
 
 		elif pressCount == 1:
-			# Attempts to copy the application name and version to the clipboard
-			if api.copyToClip("{name} {version}".format(name=appName, version=appVersion)):
+			# Attempts to copy the application name, version, and architecture to the clipboard
+			clipContents: str = "{name}\n{version}".format(name=appName, version=appVersion)
+			if appArch is not None:
+				clipContents += "\n{arch}".format(arch=appArch)
+			if api.copyToClip(clipContents):
 				ui.message(_(
 					# Translators: This is the message announced when all information has been copied.
-					"Copied {name} {version} to the clipboard"
-				).format(name=appName, version=appVersion))
+					"Copied {name} {versionAndArch} to the clipboard"
+				).format(name=appName, versionAndArch=appVersionAndArch))
 			else:  # Copy failure
 				ui.message(_(
 					# Translators: This is the message announced when all information hasn't been copied.
-					"Failed to copy application name and version information to the clipboard."
+					"Failed to copy application information to the clipboard."
 				))
 
 		else:  # pressCount > 1
-			# Attempts to copy the application version to the clipboard
-			if api.copyToClip(appVersion):
+			# Attempts to copy the application version (and architecture, if available) to the clipboard
+			if api.copyToClip(appVersionAndArch):
 				ui.message(_(
-					# Translators: This is the message announced when only the application's version has been copied.
-					"Copied {version} to the clipboard."
-				).format(version=appVersion))
+					# Translators: The message reporting that only the application's version (and arch) has been copied.
+					"Copied {versionAndArch} to the clipboard."
+				).format(versionAndArch=appVersionAndArch))
 			else:  # Copy failure
 				# Translators: This is the message announced when all information hasn't been copied.
 				ui.message(_("Cannot copy version information to the clipboard."))
