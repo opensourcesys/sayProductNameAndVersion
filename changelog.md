@@ -2,6 +2,10 @@
 
 Note: translation-only releases, and never released versions, are not included here.
 
+### 2026.1.5
+
+* Logic tightening for error handling.
+
 ### 2026.1.4
 
 * Renamed (mostly), to: Say Application Name and Version (sayAppNameAndVersion).

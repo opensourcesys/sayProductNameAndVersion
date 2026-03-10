@@ -25,16 +25,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Can't use @script while remaining compatible with NVDA 2017.3, as original author strongly requested.
 	def script_sayAppNameAndVersion(self, gesture):
 		focus = api.getFocusObject()
-		realAppName: str | None = None
-		appName: str = ""
+		appName: Optional[str] = None
 		appVersion: str = ""
 
 		try:
-			realAppName = focus.appModule.productName
-			if realAppName is None or realAppName == "":  # If the retrieved name is invalid
+			appName = focus.appModule.productName
+			if appName is None or appName == "":  # If the retrieved name is invalid
 				raise ValueErrorException
-			else:
-				appName = realAppName  # If the name is not empty
 		except Exception as e:
 			# Translators: This is used when the name of the focused application cannot be found.
 			appName = _("Application unknown")
