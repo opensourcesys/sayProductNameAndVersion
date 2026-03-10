@@ -72,7 +72,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:  # pressCount > 1
 			# Attempts to copy the application version to the clipboard
 			if api.copyToClip(appVersion):
-				message(_(
+				ui.message(_(
 					# Translators: This is the message announced when only the application's version has been copied.
 					"Copied {version} to the clipboard."
 				).format(version=appVersion))
