@@ -1,8 +1,8 @@
 ## Changelog
 
-Note: translation-only releases are not included here.
+Note: translation-only releases, and never released versions, are not included here.
 
-### 2026.1.1
+### 2026.1.2
 
 * Renamed (mostly), to: Say Application Name and Version (sayAppNameAndVersion).
 * Refactored the code to be more like what NVDA will expect in "globalCommands.py".

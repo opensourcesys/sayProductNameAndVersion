@@ -77,8 +77,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					"Copied {version} to the clipboard."
 				).format(version=appVersion))
 			else:  # Copy failure
-			# Translators: This is the message announced when all information hasn't been copied.
-			ui.message(_("Cannot copy version information to the clipboard."))
+				# Translators: This is the message announced when all information hasn't been copied.
+				ui.message(_("Cannot copy version information to the clipboard."))
 
 
 	script_sayappNameAndVersion.category = SCRCAT_TOOLS
