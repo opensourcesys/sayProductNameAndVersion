@@ -18,18 +18,19 @@ addon_info = {
 	"addon_name" : "sayProductNameAndVersion",
 	# Add-on summary
 	# Translators: Summary for this add-on to be shown on installation and add-on information.
-	"addon_summary" : _("Say Product Name and Version"),
+	"addon_summary" : _("Say Application Name and Version"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description" : _("""Speak the name and version of the application you are currently focused on, by pressing NVDA+Shift+v.
 Pressing twice will copy this information to the clipboard, to paste in bug reports, etc.
 Pressing three times copies only the version.
 The key can be remapped.
-Read help to find tips for hearing NVDA and Windows versions."""),
+Read help to find tips for hearing NVDA and Windows versions.
+Please consider a small donation: https://www.paypal.me/LukeDavis734"""),
 	# version
-	"addon_version" : "2026.1.500",
+	"addon_version" : "2026.1.501",
 	# Author(s)
-	"addon_author" : "Luke Davis <XLTechie@newanswertech.com>, Patrick ZAJDA <patrick@zajda.fr>",
+	"addon_author" : "Luke Davis <XLTechie@newanswertech.com>, Patrick ZAJDA",
 	# URL for the add-on documentation support
 	"addon_url" : "https://github.com/opensourcesys/sayProductNameAndVersion#readme",
 	# URL for the add-on repository where the source code can be found
