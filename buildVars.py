@@ -28,7 +28,7 @@ The key can be remapped.
 Read help to find tips for hearing NVDA and Windows versions.
 Please consider a small donation: https://www.paypal.me/LukeDavis734"""),
 	# version
-	"addon_version" : "2026.1.505",
+	"addon_version" : "2026.2.504",
 	# Author(s)
 	"addon_author" : "Luke Davis <XLTechie@newanswertech.com>, Patrick ZAJDA",
 	# URL for the add-on documentation support
@@ -40,7 +40,7 @@ Please consider a small donation: https://www.paypal.me/LukeDavis734"""),
 	# Minimum NVDA version supported (e.g. "2018.3.0", minor version is optional)
 	"addon_minimumNVDAVersion" : "0.0.0", # Was 2017.3
 	# Last NVDA version supported/tested (e.g. "2018.4.0", ideally more recent than minimum version)
-	"addon_lastTestedNVDAVersion" : "2026.1.0",
+	"addon_lastTestedNVDAVersion" : "2026.1.1",
 	# Add-on update channel (default is None, denoting stable releases, and for development releases, use "dev"; do not change unless you know what you are doing)
 	"addon_updateChannel" : "dev",
 	# Add-on license such as GPL 2
