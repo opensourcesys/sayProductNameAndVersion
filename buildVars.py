@@ -21,14 +21,14 @@ addon_info = {
 	"addon_summary" : _("Say Application Name and Version"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-	"addon_description" : _("""Speak the name and version of the application you are currently focused on, by pressing NVDA+Shift+v.
+	"addon_description" : _("""Speak the name, version, and architecture of the application you are currently focused on, by pressing NVDA+Shift+v.
 Pressing twice will copy this information to the clipboard, to paste in bug reports, etc.
 Pressing three times copies only the version.
 The key can be remapped.
 Read help to find tips for hearing NVDA and Windows versions.
 Please consider a small donation: https://www.paypal.me/LukeDavis734"""),
 	# version
-	"addon_version" : "2026.2.501",
+	"addon_version" : "2026.2.0",
 	# Author(s)
 	"addon_author" : "Luke Davis <XLTechie@newanswertech.com>, Patrick ZAJDA",
 	# URL for the add-on documentation support
@@ -42,7 +42,7 @@ Please consider a small donation: https://www.paypal.me/LukeDavis734"""),
 	# Last NVDA version supported/tested (e.g. "2018.4.0", ideally more recent than minimum version)
 	"addon_lastTestedNVDAVersion" : "2025.3.3",
 	# Add-on update channel (default is None, denoting stable releases, and for development releases, use "dev"; do not change unless you know what you are doing)
-	"addon_updateChannel" : "dev",
+	"addon_updateChannel" : None,
 	# Add-on license such as GPL 2
 	"addon_license": "GPL V2",
 	# URL for the license document the ad-on is licensed under
