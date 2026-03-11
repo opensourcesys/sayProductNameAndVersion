@@ -25,9 +25,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Can't use @script while remaining compatible with NVDA 2017.3, as original author strongly requested.
 	def script_sayAppNameAndVersion(self, gesture):
 		focus = api.getFocusObject()
-		appName: Optional[str] = None
-		appVersion: str = ""
-		appArch: Optional[str] = None
+		appName = None
+		appVersion = ""
+		appArch = None
 
 		try:
 			appName = focus.appModule.productName
@@ -46,14 +46,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			appVersion = _("not detected")
 
 		try:
-			appArch: Optional[str] = focus.appModule.appArchitecture
+			appArch = focus.appModule.appArchitecture
 			if appArch is None or appArch == "":  # If the retrieved version is invalid
 				raise ValueErrorException
 			else:
-				appVersionAndArch: str = "{version} ({arch})".format(version=appVersion, arch=appArch)
+				appVersionAndArch = "{version} ({arch})".format(version=appVersion, arch=appArch)
 		except Exception as e:
-			appVersionAndArch: str = appVersion
-			appArch: Optional[str] = None
+			appVersionAndArch = appVersion
+			appArch = None
 
 		pressCount = getLastScriptRepeatCount()
 
@@ -66,7 +66,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 		elif pressCount == 1:
 			# Attempts to copy the application name, version, and architecture to the clipboard
-			clipContents: str = "{name}\n{version}".format(name=appName, version=appVersion)
+			clipContents = "{name}\n{version}".format(name=appName, version=appVersion)
 			if appArch is not None:
 				clipContents += "\n{arch}".format(arch=appArch)
 			if api.copyToClip(clipContents):
