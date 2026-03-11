@@ -2,12 +2,12 @@
 * NVDA compatibility: 2017.3 through 2026.1
 * Download [stable version][1]
 
-This [NVDA](https://nvaccess.org/) add-on adds a shortcut to announce the name and version of the foreground application, or copies this information to the clipboard.
+This [NVDA](https://nvaccess.org/) add-on adds a shortcut to announce the name, version, and now the architecture of the foreground application, or copies this information to the clipboard.
 
 * English shortcut: `NVDA+shift+v`
 * Press it once to hear the information spoken, or receive it in braille.
-* Press it twice to copy name and version to the clipboard.
-* Press it three times to copy only the version to the clipboard.
+* Press it twice to copy name, version, and architecture to the clipboard.
+* Press it three times to copy only the version and architecture to the clipboard.
 
 This shortcut may be remapped in the Tools category of NVDA's Input Gestures.
 
@@ -19,7 +19,7 @@ This add-on will likely soon be integrated into NVDA itself, and this change was
 
 If you like this add-on and are willing to help others decide whether it is useful, please leave a [review][3].
 
-Also, if you are willing to buy me a cup of coffee for maintaining the add-on for the past several years, it is much appreciated!
+Also, if you are willing to buy me a cup of coffee for maintaining the add-on for the past fewl years, it is much appreciated!
 Donations can be made [via this PayPal link](https://www.paypal.me/LukeDavis734).
 
 For change history, please read the [changelog][2].
