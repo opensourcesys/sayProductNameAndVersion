@@ -12,6 +12,8 @@ import api
 from scriptHandler import getLastScriptRepeatCount
 import ui
 from globalCommands import SCRCAT_TOOLS
+from winVersion import getWinVer
+
 
 # initialize translations
 addonHandler.initTranslation()
@@ -24,10 +26,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	# Can't use @script while remaining compatible with NVDA 2017.3, as original author strongly requested.
 	def script_sayAppNameAndVersion(self, gesture):
+		appName: str | None = None
+		appVersion: str | None = None
+		appArch: str | None = None
+		appVersionAndArch: str = ""
+		isWindows: bool = False
+		# Translators: The word version.
+		versionWord: str = _("version") + " "
 		focus = api.getFocusObject()
-		appName: Optional[str] = None
-		appVersion: str = ""
-		appArch: Optional[str] = None
 
 		try:
 			appName = focus.appModule.productName
@@ -37,8 +43,18 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Translators: This is used when the name of the focused application cannot be found.
 			appName = _("Application unknown")
 
+		# Are we trying to learn the Windows version?
+		if appName == "Microsoft® Windows® Operating System":
+			appName = "{0} {1}".format(getWinVer().releaseName, getWinVer().productType)
+			appVersion = "Build: {0}.{1}".format(getWinVer().build, getWinVer().revision)
+			appArch = getWinVer().processorArchitecture
+			appVersionAndArch = "{0} ({1})".format(appVersion, appArch)
+			versionWord = ""
+			isWindows = True
+
 		try:
-			appVersion = focus.appModule.productVersion
+			if not isWindows:
+				appVersion = focus.appModule.productVersion
 			if appVersion is None or appVersion == "":  # If the retrieved version is invalid
 				raise ValueErrorException
 		except Exception as e:
@@ -46,23 +62,25 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			appVersion = _("not detected")
 
 		try:
-			appArch: Optional[str] = focus.appModule.appArchitecture
-			if appArch is None or appArch == "":  # If the retrieved version is invalid
-				raise ValueErrorException
-			else:
-				appVersionAndArch: str = "{version} ({arch})".format(version=appVersion, arch=appArch)
+			if not isWindows:
+				appArch = focus.appModule.appArchitecture
+				if appArch is None or appArch == "":  # If the retrieved architecture is invalid
+					raise ValueErrorException
+				else:
+					appVersionAndArch = "{version} ({arch})".format(version=appVersion, arch=appArch)
 		except Exception as e:
-			appVersionAndArch: str = appVersion
-			appArch: Optional[str] = None
+			appVersionAndArch = appVersion
+			appArch = ""
 
 		pressCount = getLastScriptRepeatCount()
 
 		if pressCount == 0:
 			# Outputs the application name, version, and architecture (if set)
-			ui.message(_(
-				# Translators: The message which reports the application's name, version, & architecture.
-				"{name}, version {versionAndArch}"
-			).format(name=appName, versionAndArch=appVersionAndArch))
+			ui.message(
+				"{name}, {vWord}{versionAndArch}".format(  # Missing space between tokens is intended
+					name=appName, vWord=versionWord, versionAndArch=appVersionAndArch
+				)
+			)
 
 		elif pressCount == 1:
 			# Attempts to copy the application name, version, and architecture to the clipboard
@@ -72,8 +90,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if api.copyToClip(clipContents):
 				ui.message(_(
 					# Translators: This is the message announced when all information has been copied.
-					"Copied {name} {versionAndArch} to the clipboard"
-				).format(name=appName, versionAndArch=appVersionAndArch))
+					"Copied {name} {vWord}{versionAndArch} to the clipboard"  # Missing space between tokens is intended
+				).format(name=appName, vWord=versionWord, versionAndArch=appVersionAndArch))
 			else:  # Copy failure
 				ui.message(_(
 					# Translators: This is the message announced when all information hasn't been copied.
