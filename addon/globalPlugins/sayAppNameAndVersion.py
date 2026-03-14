@@ -12,7 +12,8 @@ import api
 from scriptHandler import getLastScriptRepeatCount
 import ui
 from globalCommands import SCRCAT_TOOLS
-import winVersion
+from winVersion import getWinVer
+
 
 # initialize translations
 addonHandler.initTranslation()
@@ -30,6 +31,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		appArch: str | None = None
 		appVersionAndArch: str = ""
 		isWindows: bool = False
+		# Translators: The word version.
+		versionWord: str = _("version") + " "
 		focus = api.getFocusObject()
 
 		try:
@@ -46,6 +49,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			appVersion = "Build: {0}.{1}".format(getWinVer().build, getWinVer().revision)
 			appArch = getWinVer().processorArchitecture
 			appVersionAndArch = "{0} ({1})".format(appVersion, appArch)
+			versionWord = ""
 			isWindows = True
 
 		try:
@@ -72,10 +76,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 		if pressCount == 0:
 			# Outputs the application name, version, and architecture (if set)
-			ui.message(_(
-				# Translators: The message which reports the application's name, version, & architecture.
-				"{name}, version {versionAndArch}"
-			).format(name=appName, versionAndArch=appVersionAndArch))
+			ui.message(
+				"{name}, {vWord}{versionAndArch}"  # Missing space between tokens is intended
+			).format(name=appName, vWord=versionWord, versionAndArch=appVersionAndArch)
 
 		elif pressCount == 1:
 			# Attempts to copy the application name, version, and architecture to the clipboard
@@ -85,8 +88,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if api.copyToClip(clipContents):
 				ui.message(_(
 					# Translators: This is the message announced when all information has been copied.
-					"Copied {name} {versionAndArch} to the clipboard"
-				).format(name=appName, versionAndArch=appVersionAndArch))
+					"Copied {name} {vWord}{versionAndArch} to the clipboard"  # Missing space between tokens is intended
+				).format(name=appName, vWord=versionWord, versionAndArch=appVersionAndArch))
 			else:  # Copy failure
 				ui.message(_(
 					# Translators: This is the message announced when all information hasn't been copied.
