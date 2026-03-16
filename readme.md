@@ -29,6 +29,6 @@ For change history, please read the [changelog][2].
 
 [1]: https://www.nvaccess.org/addonStore/legacy?file=sayProductNameAndVersion
 
-[2]: https://github.com/opensourcesys/sayProductNameAndVersion/blob/master/changelog.md#readme
+[2]: https://github.com/opensourcesys/sayProductNameAndVersion/blob/master/changes.md#readme
 
 [3]: https://github.com/nvaccess/addon-datastore/discussions/2683
