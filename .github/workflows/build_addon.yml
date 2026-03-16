@@ -18,12 +18,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@main
 
     - run: echo -e "pre-commit\nscons\nmarkdown">requirements.txt
 
     - name: Set up Python
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@main
       with:
         python-version: 3.11
         #cache: 'pip'
@@ -43,7 +43,7 @@ jobs:
         scons
         scons pot
 
-    - uses: actions/upload-artifact@v4
+    - uses: actions/upload-artifact@v6
       with:
         name: packaged_addon
         path: |
@@ -55,7 +55,7 @@ jobs:
     if: ${{ startsWith(github.ref, 'refs/tags/') }}
     needs: ["build"]
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@main
     - name: download releases files
       uses: actions/download-artifact@v4
     - name: Display structure of downloaded files
