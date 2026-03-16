@@ -2,6 +2,11 @@
 
 Note: translation-only releases, and never released versions, are not included here.
 
+### 2026.3.0
+
+* Added proper Windows version reporting.
+* Reset internal name to sayProductNameAndVersion, to avoid trouble with translations. Original change in 2026.1.4.
+
 ### 2026.2.0
 
 * Added reporting of app architecture as part of the version number.
