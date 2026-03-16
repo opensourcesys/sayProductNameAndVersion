@@ -77,8 +77,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if pressCount == 0:
 			# Outputs the application name, version, and architecture (if set)
 			ui.message(
-				"{name}, {vWord}{versionAndArch}"  # Missing space between tokens is intended
-			).format(name=appName, vWord=versionWord, versionAndArch=appVersionAndArch)
+				"{name}, {vWord}{versionAndArch}".format(  # Missing space between tokens is intended
+					name=appName, vWord=versionWord, versionAndArch=appVersionAndArch
+				)
+			)
 
 		elif pressCount == 1:
 			# Attempts to copy the application name, version, and architecture to the clipboard
