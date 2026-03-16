@@ -43,7 +43,7 @@ jobs:
         scons
         scons pot
 
-    - uses: actions/upload-artifact@v4
+    - uses: actions/upload-artifact@v5
       with:
         name: packaged_addon
         path: |
