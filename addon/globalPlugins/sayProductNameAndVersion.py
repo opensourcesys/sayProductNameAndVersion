@@ -1,4 +1,4 @@
-# Name and version Info Of Current program announcement Global Plugin for NVDA
+# Name, version, and architecture Info Of Current program announcement Global Plugin for NVDA
 # Copyright (C) 2024-2026 Luke Davis <XLTechie@newanswertech.com>
 # Original author copyright (C) 2014-2023 Patrick ZAJDA <patrick@zajda.fr>
 # This file is covered by the GNU General Public License version 2.
@@ -26,13 +26,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	@script(
 		description=_(
 			# Translators: Input help mode message for Say Product Name and Version command.
-			"Speaks the name and version of the application on which you are focused."
+			"Speaks the name, version, and architecture of the application on which you are focused."
 			" Press twice to copy the information to the clipboard."
 			" Press three times to copy only the version number."
 			"Use on Desktop to get Windows version."
 		),
 		category=SCRCAT_TOOLS,
-		gesture="kb:NVDA+Shift+v"
+		gesture="kb:NVDA+Shift+v",
+		speakOnDemand=True
 	)
 	def script_sayProductNameAndVersion(self, gesture):
 		appName: str | None = None
@@ -41,14 +42,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		appVersionAndArch: str = ""
 		isWindows: bool = False
 		# Translators: The word version.
-		versionWord: str = _("version") + " "
+		versionWord: str = _("version")
 		"""
 		We translate the word "Version" separately, so it can be replaced with "Build" when checking Windows.
-		"""
-		# Translators: The word "Build", as in the Windows build number.
-		buildWord = _("Build") + " "
-		"""
-		The word "Build", used when describing Windows build numbers, which are used instead of a version.
 		"""
 		focus = api.getFocusObject()
 
@@ -63,14 +59,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Are we trying to learn the Windows version?
 		if appName == "Microsoft® Windows® Operating System":
 			appName = f"{getWinVer().releaseName} {getWinVer().productType}"
-			appVersion = "{buildWord}{getWinVer().build}.{getWinVer().revision}"
-			appArch = getWinVer().processorArchitecture
-			appVersionAndArch = "{appVersion} ({appArch})"
-			versionWord = ""
+			# Used when describing Windows build numbers, which are used instead of a version.
+			# Translators: The word "build", as in the Windows build number.
+			versionWord = _("build")
 			isWindows = True
 
 		try:
-			if not isWindows:
+			if isWindows:
+				appVersion = f"{getWinVer().build}.{getWinVer().revision}"
+			else:
 				appVersion = focus.appModule.productVersion
 			if appVersion is None or appVersion == "":  # If the retrieved version is invalid
 				raise ValueErrorException
@@ -79,12 +76,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			appVersion = _("not detected")
 
 		try:
-			if not isWindows:
+			if isWindows:
+				appArch = getWinVer().processorArchitecture
+			else:
 				appArch = focus.appModule.appArchitecture
-				if appArch is None or appArch == "":  # If the retrieved architecture is invalid
-					raise ValueErrorException
-				else:
-					appVersionAndArch = f"{appVersion} ({appArch})"
+			if appArch is None or appArch == "":  # If the retrieved architecture is invalid
+				raise ValueErrorException
+			else:
+				appVersionAndArch = f"{appVersion} ({appArch})"
 		except Exception as e:
 			appVersionAndArch = appVersion
 			appArch = ""
@@ -93,17 +92,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 		if pressCount == 0:
 			# Outputs the application name, version, and architecture (if set)
-			ui.message(f"{appName}, {versionWord}{appVersionAndArch}")  # Missing space between tokens is intended
+			ui.message(f"{appName}, {versionWord} {appVersionAndArch}")
 
 		elif pressCount == 1:
 			# Attempts to copy the application name, version, and architecture to the clipboard
-			clipContents: str = f"{appName}\n{appVersion}"
-			if appArch is not None:
-				clipContents += f"\n{appArch}")
+			clipContents: str = f"{appName}\n{versionWord} {appVersion}" + "" if appArch is None else "\n{appArch}"
 			if api.copyToClip(clipContents):
 				ui.message(_(
 					# Translators: This is the message announced when all information has been copied.
-					f"Copied {appName} {versionWord}{appVersionAndArch} to the clipboard."  # Missing space intended
+					f"Copied {appName} {versionWord} {appVersionAndArch} to the clipboard."
 				))
 			else:  # Copy failure
 				ui.message(_(
