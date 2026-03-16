@@ -18,7 +18,7 @@ It will also work from various other parts of Windows.
 
 If you like this add-on and are willing to help others decide whether it is useful, please leave a [review][3].
 
-Also, if you are willing to buy me a cup of coffee for maintaining the add-on for the past fewl years, it is much appreciated!
+Also, if you are willing to buy me a cup of coffee for maintaining the add-on for the past few years, it is much appreciated!
 Donations can be made [via this PayPal link](https://www.paypal.me/LukeDavis734).
 
 ### Miscellaneous
