@@ -18,18 +18,19 @@ addon_info = {
 	"addon_name" : "sayProductNameAndVersion",
 	# Add-on summary
 	# Translators: Summary for this add-on to be shown on installation and add-on information.
-	"addon_summary" : _("Say Product Name and Version"),
+	"addon_summary" : _("Say Application Name and Version"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description" : _("""Speak the name and version of the application you are currently focused on, by pressing NVDA+Shift+v.
 Pressing twice will copy this information to the clipboard, to paste in bug reports, etc.
 Pressing three times copies only the version.
 The key can be remapped.
-Read help to find tips for hearing NVDA and Windows versions."""),
+Read help to find tips for hearing NVDA and Windows versions.
+Please consider a small donation: https://www.paypal.me/LukeDavis734"""),
 	# version
-	"addon_version" : "2026.1.0",
+	"addon_version" : "2026.3.6",
 	# Author(s)
-	"addon_author" : "Luke Davis <XLTechie@newanswertech.com>, Patrick ZAJDA <patrick@zajda.fr>",
+	"addon_author" : "Luke Davis <XLTechie@newanswertech.com>, Patrick ZAJDA",
 	# URL for the add-on documentation support
 	"addon_url" : "https://github.com/opensourcesys/sayProductNameAndVersion#readme",
 	# URL for the add-on repository where the source code can be found
@@ -37,7 +38,7 @@ Read help to find tips for hearing NVDA and Windows versions."""),
 	# Documentation file name
 	"addon_docFileName" : "readme.html",
 	# Minimum NVDA version supported (e.g. "2018.3.0", minor version is optional)
-	"addon_minimumNVDAVersion" : "0.0.0", # Was 2017.3
+	"addon_minimumNVDAVersion" : "2025.3.1",
 	# Last NVDA version supported/tested (e.g. "2018.4.0", ideally more recent than minimum version)
 	"addon_lastTestedNVDAVersion" : "2026.1.0",
 	# Add-on update channel (default is None, denoting stable releases, and for development releases, use "dev"; do not change unless you know what you are doing)

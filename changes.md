@@ -1,6 +1,25 @@
 ## Changelog
 
-Note: translation-only releases are not included here.
+Note: translation-only releases, and never released versions, are not included here.
+
+### 2026.3.0
+
+* Added proper Windows version reporting.
+* Reset internal name to sayProductNameAndVersion, to avoid trouble with translations. Original change in 2026.1.4.
+
+### 2026.2.0
+
+* Added reporting of app architecture as part of the version number.
+
+### 2026.1.5
+
+* Logic tightening for error handling.
+
+### 2026.1.4
+
+* Renamed (mostly), to: Say Application Name and Version (sayAppNameAndVersion).
+* Refactored the code to be more like what NVDA will expect in "globalCommands.py".
+* Added a donations link in README and Add-on Store description.
 
 ### 2025.1.0
 
