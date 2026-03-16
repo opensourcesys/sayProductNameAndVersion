@@ -26,13 +26,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	# Can't use @script while remaining compatible with NVDA 2017.3, as original author strongly requested.
 	def script_sayProductNameAndVersion(self, gesture):
-		appName: str | None = None
-		appVersion: str | None = None
-		appArch: str | None = None
-		appVersionAndArch: str = ""
-		isWindows: bool = False
+		appName = None
+		appVersion = None
+		appArch = None
+		appVersionAndArch = ""
+		isWindows = False
 		# Translators: The word version.
-		versionWord: str = _("version") + " "
+		versionWord = _("version") + " "
 		focus = api.getFocusObject()
 
 		try:
@@ -84,7 +84,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 		elif pressCount == 1:
 			# Attempts to copy the application name, version, and architecture to the clipboard
-			clipContents: str = "{name}\n{version}".format(name=appName, version=appVersion)
+			clipContents = "{name}\n{version}".format(name=appName, version=appVersion)
 			if appArch is not None:
 				clipContents += "\n{arch}".format(arch=appArch)
 			if api.copyToClip(clipContents):
@@ -112,7 +112,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	script_sayProductNameAndVersion.category = SCRCAT_TOOLS
 	script_sayProductNameAndVersion.__doc__ = _(
-		# Translators: Input help mode message for say application name and version command.
+		# Translators: Input help mode message for Say Product Name and Version command.
 		"Speaks the name and version of the application on which you are focused."
 		" Press twice to copy the information to the clipboard."
 		" Press three times to copy only the version number."
