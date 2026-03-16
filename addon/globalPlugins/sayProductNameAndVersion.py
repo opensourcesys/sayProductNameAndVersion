@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Name and version Info Of Current program announcement Global Plugin for NVDA
 # Copyright (C) 2024-2026 Luke Davis <XLTechie@newanswertech.com>
 # Original author copyright (C) 2014-2023 Patrick ZAJDA <patrick@zajda.fr>
@@ -9,7 +8,7 @@
 import addonHandler
 import globalPluginHandler
 import api
-from scriptHandler import getLastScriptRepeatCount
+from scriptHandler import getLastScriptRepeatCount, script
 import ui
 from globalCommands import SCRCAT_TOOLS
 from winVersion import getWinVer
@@ -22,9 +21,19 @@ addonHandler.initTranslation()
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self, *args, **kwargs):
-		super(GlobalPlugin, self).__init__()
+		super().__init__()
 
-	# Can't use @script while remaining compatible with NVDA 2017.3, as original author strongly requested.
+	@script(
+		description=_(
+			# Translators: Input help mode message for Say Product Name and Version command.
+			"Speaks the name and version of the application on which you are focused."
+			" Press twice to copy the information to the clipboard."
+			" Press three times to copy only the version number."
+			"Use on Desktop to get Windows version."
+		),
+		category=SCRCAT_TOOLS,
+		gesture="kb:NVDA+Shift+v"
+	)
 	def script_sayProductNameAndVersion(self, gesture):
 		appName: str | None = None
 		appVersion: str | None = None
@@ -33,6 +42,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		isWindows: bool = False
 		# Translators: The word version.
 		versionWord: str = _("version") + " "
+		"""
+		We translate the word "Version" separately, so it can be replaced with "Build" when checking Windows.
+		"""
+		# Translators: The word "Build", as in the Windows build number.
+		buildWord = _("Build") + " "
+		"""
+		The word "Build", used when describing Windows build numbers, which are used instead of a version.
+		"""
 		focus = api.getFocusObject()
 
 		try:
@@ -45,10 +62,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 		# Are we trying to learn the Windows version?
 		if appName == "Microsoft® Windows® Operating System":
-			appName = "{0} {1}".format(getWinVer().releaseName, getWinVer().productType)
-			appVersion = "Build: {0}.{1}".format(getWinVer().build, getWinVer().revision)
+			appName = f"{getWinVer().releaseName} {getWinVer().productType}"
+			appVersion = "{buildWord}{getWinVer().build}.{getWinVer().revision}"
 			appArch = getWinVer().processorArchitecture
-			appVersionAndArch = "{0} ({1})".format(appVersion, appArch)
+			appVersionAndArch = "{appVersion} ({appArch})"
 			versionWord = ""
 			isWindows = True
 
@@ -67,7 +84,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				if appArch is None or appArch == "":  # If the retrieved architecture is invalid
 					raise ValueErrorException
 				else:
-					appVersionAndArch = "{version} ({arch})".format(version=appVersion, arch=appArch)
+					appVersionAndArch = f"{appVersion} ({appArch})"
 		except Exception as e:
 			appVersionAndArch = appVersion
 			appArch = ""
@@ -76,22 +93,18 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 		if pressCount == 0:
 			# Outputs the application name, version, and architecture (if set)
-			ui.message(
-				"{name}, {vWord}{versionAndArch}".format(  # Missing space between tokens is intended
-					name=appName, vWord=versionWord, versionAndArch=appVersionAndArch
-				)
-			)
+			ui.message(f"{appName}, {versionWord}{appVersionAndArch}")  # Missing space between tokens is intended
 
 		elif pressCount == 1:
 			# Attempts to copy the application name, version, and architecture to the clipboard
-			clipContents: str = "{name}\n{version}".format(name=appName, version=appVersion)
+			clipContents: str = f"{appName}\n{appVersion}"
 			if appArch is not None:
-				clipContents += "\n{arch}".format(arch=appArch)
+				clipContents += f"\n{appArch}")
 			if api.copyToClip(clipContents):
 				ui.message(_(
 					# Translators: This is the message announced when all information has been copied.
-					"Copied {name} {vWord}{versionAndArch} to the clipboard"  # Missing space between tokens is intended
-				).format(name=appName, vWord=versionWord, versionAndArch=appVersionAndArch))
+					f"Copied {appName} {versionWord}{appVersionAndArch} to the clipboard."  # Missing space intended
+				))
 			else:  # Copy failure
 				ui.message(_(
 					# Translators: This is the message announced when all information hasn't been copied.
@@ -101,20 +114,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:  # pressCount > 1
 			# Attempts to copy the application version (and architecture, if available) to the clipboard
 			if api.copyToClip(appVersionAndArch):
-				ui.message(_(
-					# Translators: The message reporting that only the application's version (and arch) has been copied.
-					"Copied {versionAndArch} to the clipboard."
-				).format(versionAndArch=appVersionAndArch))
+				# Translators: The message reporting that only the application's version and architecture were copied.
+				ui.message(_(f"Copied {appVersionAndArch} to the clipboard."))
 			else:  # Copy failure
 				# Translators: This is the message announced when all information hasn't been copied.
 				ui.message(_("Cannot copy version information to the clipboard."))
-
-
-	script_sayProductNameAndVersion.category = SCRCAT_TOOLS
-	script_sayProductNameAndVersion.__doc__ = _(
-		# Translators: Input help mode message for say application name and version command.
-		"Speaks the name and version of the application on which you are focused."
-		" Press twice to copy the information to the clipboard."
-		" Press three times to copy only the version number."
-	)
-	__gestures = { "kb:NVDA+Shift+v": "sayProductNameAndVersion" }
