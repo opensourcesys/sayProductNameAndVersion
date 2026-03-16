@@ -25,7 +25,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		super(GlobalPlugin, self).__init__()
 
 	# Can't use @script while remaining compatible with NVDA 2017.3, as original author strongly requested.
-	def script_sayAppNameAndVersion(self, gesture):
+	def script_sayProductNameAndVersion(self, gesture):
 		appName: str | None = None
 		appVersion: str | None = None
 		appArch: str | None = None
@@ -110,11 +110,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				ui.message(_("Cannot copy version information to the clipboard."))
 
 
-	script_sayAppNameAndVersion.category = SCRCAT_TOOLS
-	script_sayAppNameAndVersion.__doc__ = _(
+	script_sayProductNameAndVersion.category = SCRCAT_TOOLS
+	script_sayProductNameAndVersion.__doc__ = _(
 		# Translators: Input help mode message for say application name and version command.
 		"Speaks the name and version of the application on which you are focused."
 		" Press twice to copy the information to the clipboard."
 		" Press three times to copy only the version number."
 	)
-	__gestures = { "kb:NVDA+Shift+v": "sayAppNameAndVersion" }
+	__gestures = { "kb:NVDA+Shift+v": "sayProductNameAndVersion" }
