@@ -96,7 +96,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 		elif pressCount == 1:
 			# Attempts to copy the application name, version, and architecture to the clipboard
-			clipContents: str = f"{appName}\n{versionWord} {appVersion}" + "" if appArch is None else f"\n{appArch}"
+			clipContents: str = f"{appName}\n{versionWord} {appVersion}" + ("" if appArch is None else f"\n{appArch}")
 			if api.copyToClip(clipContents):
 				ui.message(_(
 					# Translators: This is the message announced when all information has been copied.
