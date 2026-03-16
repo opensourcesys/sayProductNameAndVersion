@@ -59,7 +59,7 @@ jobs:
     - name: download releases files
       uses: actions/download-artifact@v5
     - name: Release
-      uses: softprops/action-gh-release@v2
+      uses: softprops/action-gh-release@master
       with:
         files: |
           packaged_addon/*.nvda-addon
