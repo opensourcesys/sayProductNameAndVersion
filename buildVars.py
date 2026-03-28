@@ -28,7 +28,7 @@ The key can be remapped.
 Read help to find tips for hearing NVDA and Windows versions.
 Please consider a small donation: https://www.paypal.me/LukeDavis734"""),
 	# version
-	"addon_version" : "2026.3.506",
+	"addon_version" : "2026.3.600",
 	# Author(s)
 	"addon_author" : "Luke Davis <XLTechie@newanswertech.com>, Patrick ZAJDA",
 	# URL for the add-on documentation support
