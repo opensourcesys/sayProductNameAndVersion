@@ -28,8 +28,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Translators: Input help mode message for Say Product Name and Version command.
 			"Speaks the name, version, and architecture of the application on which you are focused."
 			" Press twice to copy the information to the clipboard."
-			" Press three times to copy only the version number."
-			"Use on Desktop to get Windows version."
+			" Press three times to copy the application name and version, as well as those of Windows and NVDA."
 		),
 		category=SCRCAT_TOOLS,
 		gesture="kb:NVDA+Shift+v",
@@ -39,80 +38,98 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		appName: str | None = None
 		appVersion: str | None = None
 		appArch: str | None = None
+		singleLineAppInfo: str = ""
 		appVersionAndArch: str = ""
 		isWindows: bool = False
-		# Translators: The word version.
-		versionWord: str = _("version")
-		"""
-		We translate the word "Version" separately, so it can be replaced with "Build" when checking Windows.
-		"""
+		# There are two circumstances in which we might need Windows information; get it in case.
+		windowsName: str = f"{getWinVer().releaseName} {getWinVer().productType}"
+		windowsbuildAndRev: str = f"{getWinVer().build}.{getWinVer().revision}"
+		windowsArch: str = getWinVer().processorArchitecture
+
+		# Translators: A message presented whenever a copy to clipboard operation failed.
+		COPY_FAILED_MSG = _("Unable to copy version information to the clipboard.")
+
 		focus = api.getFocusObject()
 
 		try:
 			appName = focus.appModule.productName
 			if appName is None or appName == "":  # If the retrieved name is invalid
 				raise ValueErrorException
-		except Exception as e:
+		except Exception as e:  # FixMe: What other exceptions can arrive here?
 			# Translators: This is used when the name of the focused application cannot be found.
 			appName = _("Application unknown")
 
 		# Are we trying to learn the Windows version?
 		if appName == "Microsoft® Windows® Operating System":
-			appName = f"{getWinVer().releaseName} {getWinVer().productType}"
-			# Used when describing Windows build numbers, which are used instead of a version.
-			# Translators: The word "build", as in the Windows build number.
-			versionWord = _("build")
 			isWindows = True
+			appName = windowsName
+			appVersion = windowsBuildAndRev
+			appArch = windowsArch
 
 		try:
-			if isWindows:
-				appVersion = f"{getWinVer().build}.{getWinVer().revision}"
-			else:
+			if not isWindows:
 				appVersion = focus.appModule.productVersion
 			if appVersion is None or appVersion == "":  # If the retrieved version is invalid
 				raise ValueErrorException
-		except Exception as e:
+		except Exception as e:  # FixMe: What other kind of exceptions can arrive here?
 			# Translators: This is used when the version of the focused application cannot be found.
 			appVersion = _("not detected")
 
 		try:
-			if isWindows:
-				appArch = getWinVer().processorArchitecture
-			else:
+			if not isWindows:
 				appArch = focus.appModule.appArchitecture
 			if appArch is None or appArch == "":  # If the retrieved architecture is invalid
 				raise ValueErrorException
-			else:
-				appVersionAndArch = f"{appVersion} ({appArch})"
-		except Exception as e:
-			appVersionAndArch = appVersion
+		except Exception as e:  # Which exceptions can arrive here?
 			appArch = ""
 
-		pressCount = getLastScriptRepeatCount()
+		singleLineWinInfo = _(
+			# Translators: A single line containing the Windows name, build and revision numbers, and architecture.
+			"{winName} build {winBuild} ({winArch})"
+		).format(winName=windowsName, winBuild=windowsBuildAndRev, winArch=windowsArch)
 
-		if pressCount == 0:
+		if not isWindows:  # It's an app, not the OS
+			singleLineAppInfo = _(
+				# Translators: A single line containing the name, version, and architecture of the application in focus.
+				"{appName} version {appVer} ({appArch})"
+			).format(appName=appName, appVer=appVersion, appArch=appArch)
+		else:
+			singleLineAppInfo = singleLineWinInfo
+
+		if getLastScriptRepeatCount() == 0:
 			# Outputs the application name, version, and architecture (if set)
-			ui.message(f"{appName}, {versionWord} {appVersionAndArch}")
+			ui.message(singleLineAppInfo)
 
-		elif pressCount == 1:
+		elif getLastScriptRepeatCount() == 1:
 			# Attempts to copy the application name, version, and architecture to the clipboard
-			clipContents: str = f"{appName}\n{versionWord} {appVersion}" + ("" if appArch is None else f"\n{appArch}")
-			if api.copyToClip(clipContents):
+			forClip = f"{appName}\n{appVersion}" + ("" if appArch is "" else f"\n{appArch}")
+			if api.copyToClip(forClip):
 				ui.message(_(
-					# Translators: This is the message announced when all information has been copied.
-					f"Copied {appName} {versionWord} {appVersionAndArch} to the clipboard."
-				))
+					# Translators: This is the message announced when name and version have been copied.
+					"Copied version information for {appName} to the clipboard."
+				).format(appName=appName))
 			else:  # Copy failure
-				ui.message(_(
-					# Translators: This is the message announced when all information hasn't been copied.
-					"Failed to copy application information to the clipboard."
-				))
+				ui.message(COPY_FAILED_MSG)
 
-		else:  # pressCount > 1
-			# Attempts to copy the application version (and architecture, if available) to the clipboard
-			if api.copyToClip(appVersionAndArch):
-				# Translators: The message reporting that only the application's version and architecture were copied.
-				ui.message(_(f"Copied {appVersionAndArch} to the clipboard."))
+		else:  # getLastScriptRepeatCount() > 1
+			# Attempts to copy the name and version for the application, NVDA, and Windows, to the clipboard
+			# If the focused application is a Windows component, there is no application, and we don't copy that part.
+			forClip = "" if isWindows else f"{singleLineAppInfo}\n"
+			forClip += _(
+				# Translators: The name of NVDA, the word "version", and NVDA's version.
+				"{name} version {version}"
+			).format(name=buildVersion.name, version=buildVersion.formatBuildVersionString())
+			forClip += f"\n{singleLineWinInfo}"
+
+			if api.copyToClip(forClip):
+				if isWindows:
+					# Translators: Message reporting that NVDA and Windows versions were copied.
+					ui.message(_("Copied version information for NVDA and Windows to the clipboard."))
+				else:
+					ui.message(_(
+						# Translators: A message reporting that application, NVDA, and Windows versions were copied.
+						"Copied version information for {appName}, NVDA, and Windows to the clipboard."
+					).format(appName=appName)
 			else:  # Copy failure
 				# Translators: This is the message announced when all information hasn't been copied.
-				ui.message(_("Cannot copy version information to the clipboard."))
+				ui.message(COPY_FAILED_MSG)
