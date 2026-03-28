@@ -129,7 +129,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					ui.message(_(
 						# Translators: A message reporting that application, NVDA, and Windows versions were copied.
 						"Copied version information for {appName}, NVDA, and Windows to the clipboard."
-					).format(appName=appName)
+					).format(appName=appName))
 			else:  # Copy failure
 				# Translators: This is the message announced when all information hasn't been copied.
 				ui.message(COPY_FAILED_MSG)
