@@ -1,15 +1,15 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Copyright (C) 2026 Nikita Tseykovets
 # This file is distributed under the same license as the 'sayProductNameAndVersion' package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Nikita Tseykovets <tseikovets@rambler.ru>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 'sayProductNameAndVersion' '2021.04'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2022-05-21 19:18+0400\n"
-"PO-Revision-Date: 2024-05-07 17:54+0300\n"
-"Last-Translator: Dragan Ratkovich\n"
+"POT-Creation-Date: 2026-05-05 16:19+0300\n"
+"PO-Revision-Date: 2026-05-05 16:41+0300\n"
+"Last-Translator: Nikita Tseykovets <tseikovets@rambler.ru>\n"
 "Language-Team: \n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -17,55 +17,68 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.9\n"
+
+#. Translators: Input help mode message for Say Product Name and Version command.
+#: addon\globalPlugins\sayProductNameAndVersion.py:29
+msgid ""
+"Speaks the name, version, and architecture of the application on which you "
+"are focused. Press twice to copy the information to the clipboard. Press "
+"three times to copy only the version number.Use on Desktop to get Windows "
+"version."
+msgstr ""
+"Произносит название и версию приложения, которое в настоящее время вами "
+"сфокусировано, по нажатию NVDA+Shift+V.\n"
+"При двойном нажатии эта информация будет скопирована в буфер обмена для "
+"вставки в сообщения об ошибках и т.д.\n"
+"При тройном нажатии будет скопирована только версия.\n"
+"Клавишу можно переназначить.\n"
+"Прочитайте справку, чтобы найти советы по прослушиванию версий NVDA и "
+"Windows.\n"
+"Пожалуйста, рассмотрите возможность небольшого пожертвования: https://"
+"www.paypal.me/LukeDavis734"
+
+#. Translators: The word version.
+#: addon\globalPlugins\sayProductNameAndVersion.py:45
+msgid "version"
+msgstr "версия"
 
 #. Translators: This is used when the name of the focused application cannot be found.
-msgid "Application"
-msgstr "Приложение"
+#: addon\globalPlugins\sayProductNameAndVersion.py:57
+msgid "Application unknown"
+msgstr "Приложение неизвестно"
 
-#. Translators: this will be spoken if version information was not available.
-msgid "Unable to get version info"
-msgstr "Не удалось получить информацию о версии"
+#. Used when describing Windows build numbers, which are used instead of a version.
+#. Translators: The word "build", as in the Windows build number.
+#: addon\globalPlugins\sayProductNameAndVersion.py:64
+msgid "build"
+msgstr "сборка"
 
-#. Translators: This is the message which will be spoken containing both the product name and version.
-#. {name} is the app name, {version} is the version.
-#, python-brace-format
-msgid "{name} version {version}"
-msgstr "{name} версия {version}"
-
-#. Translators: This is the message announced when all information has been copied..
-#. {name} is the app name, {version} is the version.
-#, python-brace-format
-msgid "Copied {name} {version} to the clipboard"
-msgstr "{name} версия {version} скопировано в буфер обмена"
+#. Translators: This is used when the version of the focused application cannot be found.
+#: addon\globalPlugins\sayProductNameAndVersion.py:76
+msgid "not detected"
+msgstr "не обнаружено"
 
 #. Translators: This is the message announced when all information hasn't been copied.
+#: addon\globalPlugins\sayProductNameAndVersion.py:108
+msgid "Failed to copy application information to the clipboard."
+msgstr "Не удалось скопировать информацию о приложении в буфер обмена."
+
+#. Copy failure
+#. Translators: This is the message announced when all information hasn't been copied.
+#: addon\globalPlugins\sayProductNameAndVersion.py:118
 msgid "Cannot copy version information to the clipboard."
-msgstr "Не удаётся скопировать информацию о версии в буфер обмена."
-
-#. Translators: This is the message announced when only the version has been copied..
-#. {version} is the version.
-#, python-brace-format
-msgid "Copied {version} to the clipboard."
-msgstr "Версия {version} скопировано в буфер обмена."
-
-#. Translators: Input help mode message for say product name and version command.
-msgid ""
-"Speaks the name and version of the application on which you are focused. "
-"Press twice to copy the information to the clipboard. Press three times to "
-"copy only the version number."
-msgstr ""
-"Объявляет название и версию приложения, которому принадлежит выделенное "
-"окно. При двойном нажатии копирует эту информацию в буфер обмена. При "
-"тройном нажатии копирует только номер версии."
+msgstr "Не удаётся скопировать информацию о версии в буфер обмена.\\"
 
 #. Add-on summary
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
-msgid "Say Product Name and Version"
-msgstr "Объявить название и версию продукта"
+#: buildVars.py:21
+msgid "Say Application Name and Version"
+msgstr "Сообщить название приложения и его версию"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#: buildVars.py:24
 msgid ""
 "Speak the name and version of the application you are currently focused on, "
 "by pressing NVDA+Shift+v.\n"
@@ -73,16 +86,34 @@ msgid ""
 "reports, etc.\n"
 "Pressing three times copies only the version.\n"
 "The key can be remapped.\n"
-"Read help to find tips for hearing NVDA and Windows versions."
+"Read help to find tips for hearing NVDA and Windows versions.\n"
+"Please consider a small donation: https://www.paypal.me/LukeDavis734"
 msgstr ""
-"Произносит название и версию приложения, на котором вы в данный момент "
-"работаете, по нажатию NVDA+Shift+v.\n"
+"Произносит название и версию приложения, которое в настоящее время вами "
+"сфокусировано, по нажатию NVDA+Shift+V.\\n\n"
 "При двойном нажатии эта информация будет скопирована в буфер обмена для "
-"вставки в сообщения об ошибках и т.д.\n"
-"При тройном нажатии будет скопирована только версия приложения.\n"
-"Клавишу можно переназначить.\n"
-"Ознакомьтесь со справкой, чтобы найти советы по прослушиванию версий NVDA и "
-"Windows."
+"вставки в сообщения об ошибках и т.д.\\n\n"
+"При трехкратном нажатии будет скопирована только версия.\\n\n"
+"Ключ можно переназначить.\\n\n"
+"Прочитайте справку, чтобы найти советы по прослушиванию NVDA-версий и "
+"версий для Windows.\\n\n"
+"Пожалуйста, примите во внимание небольшое пожертвование: https://"
+"www.paypal.me/LukeDavis734"
+
+#~ msgid "Unable to get version info"
+#~ msgstr "Не удалось получить информацию о версии"
+
+#, python-brace-format
+#~ msgid "{name} version {version}"
+#~ msgstr "{name} версия {version}"
+
+#, python-brace-format
+#~ msgid "Copied {name} {version} to the clipboard"
+#~ msgstr "{name} версия {version} скопировано в буфер обмена"
+
+#, python-brace-format
+#~ msgid "Copied {version} to the clipboard."
+#~ msgstr "Версия {version} скопировано в буфер обмена."
 
 #, fuzzy
 #~ msgid ""
