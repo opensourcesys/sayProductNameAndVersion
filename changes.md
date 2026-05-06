@@ -2,6 +2,10 @@
 
 Note: translation-only releases, and never released versions, are not included here.
 
+### 2026.4.0
+
+* Declared compatibility with NVDA 2026.1.
+
 ### 2026.3.0
 
 * Added proper Windows version reporting.
