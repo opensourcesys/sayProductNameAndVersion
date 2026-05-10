@@ -100,7 +100,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if api.copyToClip(clipContents):
 				ui.message(_(
 					# Translators: This is the message announced when all information has been copied.
-					f"Copied {appName} {versionWord} {appVersionAndArch} to the clipboard."
+					"Copied {app_name} {version_word} {app_version_and_arch} to the clipboard."
+				).format(
+					app_name=appName,
+					version_word=versionWord,
+					app_version_and_arch=appVersionAndArch
 				))
 			else:  # Copy failure
 				ui.message(_(
@@ -111,8 +115,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:  # pressCount > 1
 			# Attempts to copy the application version (and architecture, if available) to the clipboard
 			if api.copyToClip(appVersionAndArch):
-				# Translators: The message reporting that only the application's version and architecture were copied.
-				ui.message(_(f"Copied {appVersionAndArch} to the clipboard."))
+				ui.message(_(
+					# Translators: The message reporting that only the application's version and architecture were copied.
+					"Copied {app_version_and_arch} to the clipboard."
+				).format(
+					app_version_and_arch=appVersionAndArch
+				))
 			else:  # Copy failure
 				# Translators: This is the message announced when all information hasn't been copied.
 				ui.message(_("Cannot copy version information to the clipboard."))
