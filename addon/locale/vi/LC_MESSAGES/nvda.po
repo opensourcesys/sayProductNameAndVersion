@@ -3,59 +3,101 @@
 # This file is distributed under the same license as the sayProductNameAndVersion package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: sayProductNameAndVersion 2021.07\n"
+"Project-Id-Version: sayProductNameAndVersion 2026.4.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
-"POT-Creation-Date: 2021-08-17 08:33+0000\n"
-"PO-Revision-Date: 2021-08-28 12:55+0700\n"
+"POT-Creation-Date: 2026-05-06 12:59+0000\n"
+"PO-Revision-Date: 2026-05-18 15:23+0700\n"
+"Last-Translator: nguyenninhhoang <nguyenninhhoang2005@gmail.com>\n"
+"Language-Team: \n"
 "Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.9\n"
+
+#. Translators: Input help mode message for Say Product Name and Version command.
+#: addon/globalPlugins/sayProductNameAndVersion.py:29
+msgid ""
+"Speaks the name, version, and architecture of the application on which you "
+"are focused. Press twice to copy the information to the clipboard. Press "
+"three times to copy only the version number.Use on Desktop to get Windows "
+"version."
+msgstr ""
+"Đọc tên, phiên bản, và kiến trúc của ứng dụng mà bạn đang tập trung vào. "
+"Nhấn hai lần để sao chép thông tin vào bộ nhớ. Nhấn ba lần để chỉ sao chép "
+"số phiên bản. Sử dụng trên Máy tính bàn để lấy phiên bản Windows."
+
+#. Translators: The word version.
+#: addon/globalPlugins/sayProductNameAndVersion.py:45
+msgid "version"
+msgstr "phiên bản"
 
 #. Translators: This is used when the name of the focused application cannot be found.
-msgid "Application"
-msgstr "Ứng dụng"
+#: addon/globalPlugins/sayProductNameAndVersion.py:57
+msgid "Application unknown"
+msgstr "Ứng dụng không xác định"
 
-#. Translators: This is the message which will be spoken or copied to the clipboard.
-#. {name} is the app name, {version} its the version.
+#. Used when describing Windows build numbers, which are used instead of a version.
+#. Translators: The word "build", as in the Windows build number.
+#: addon/globalPlugins/sayProductNameAndVersion.py:64
+msgid "build"
+msgstr "xây dựng"
+
+#. Translators: This is used when the version of the focused application cannot be found.
+#: addon/globalPlugins/sayProductNameAndVersion.py:76
+msgid "not detected"
+msgstr "không phát hiện"
+
+#. Translators: This is the message announced when all information has been copied.
+#: addon/globalPlugins/sayProductNameAndVersion.py:103
 #, python-brace-format
-msgid "{name} version {version}"
-msgstr "{name} phiên bản {version}"
+msgid "Copied {appName} {versionWord} {appVersionAndArch} to the clipboard."
+msgstr "Đã sao chép {appName} {versionWord} {appVersionAndArch} vao bộ nhớ."
 
-#. Translators: This is the message announced when all informations has been copied.
+#. Translators: This is the message announced when all information hasn't been copied.
+#: addon/globalPlugins/sayProductNameAndVersion.py:108
+msgid "Failed to copy application information to the clipboard."
+msgstr "Không sao chép được thông tin ứng dụng vào bộ nhớ."
+
+#. Translators: The message reporting that only the application's version and architecture were copied.
+#: addon/globalPlugins/sayProductNameAndVersion.py:115
 #, python-brace-format
-msgid "{name} version {version} copied to the clipboard"
-msgstr "đã chép vào bảng tạm {name} phiên bản{version} "
+msgid "Copied {appVersionAndArch} to the clipboard."
+msgstr "Đã sao chép {appVersionAndArch} vào bộ nhớ."
 
-#. Translators: This is the message announced when all informations hasn't been copied.
-msgid "Cannot copy version informations to the clipboard."
-msgstr "không thể chép thông tin ứng dụng vào bảng tạm "
+#. Copy failure
+#. Translators: This is the message announced when all information hasn't been copied.
+#: addon/globalPlugins/sayProductNameAndVersion.py:118
+msgid "Cannot copy version information to the clipboard."
+msgstr "Không thể sao chép thông tin phiên bản vào bộ nhớ."
 
-#. Translators: this will be spoken if version informations were not available.
-msgid "Unable to get version info"
-msgstr "không thấy thông tin phiên bản "
-
-msgid ""
-"Say product name and version of the application which ownes the focused "
-"window. If pressed twice, copy these information to the clipboard"
-msgstr ""
-
-#. Add-on description
+#. Add-on summary
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
+#: buildVars.py:21
 msgid "Say Product Name and Version"
-msgstr "đọc tên và phiên bản ứng dụng "
+msgstr "Đọc tên thành hần và phiên bản"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#: buildVars.py:24
 msgid ""
-"Say product name and version of the application which ownes the focused "
-"window.\n"
-"Shortcut: Shift+NVDA+V"
+"Speak the name and version of the application you are currently focused on, "
+"by pressing NVDA+Shift+v.\n"
+"Pressing twice will copy this information to the clipboard, to paste in bug "
+"reports, etc.\n"
+"Pressing three times copies only the version.\n"
+"The key can be remapped.\n"
+"Read help to find tips for hearing NVDA and Windows versions.\n"
+"Please consider a small donation: https://www.paypal.me/LukeDavis734"
 msgstr ""
-"đọc tên ứng dụng và phiên bản tại cửa sổ đang hoạt động . \\ N\n"
-"Phím tắt: Shift + NVDA + V"
+"Nói tên và phiên bản của ứng dụng mà bạn đang tập trung vào bằng cách nhấn "
+"NVDA+Shift+v.\n"
+"Nhấn hai lần sẽ sao chép thông tin này vào bộ nhớ, để dán vào báo cáo lỗi, "
+"v.v.\n"
+"Nhấn ba lần chỉ sao chép phiên bản.\n"
+"Chìa khóa có thể được ánh xạ lại.\n"
+"Đọc trợ giúp để tìm mẹo nghe phiên bản NVDA và Windows.\n"
+"Vui lòng xem xét một khoản quyên góp nhỏ: https://www.paypal.me/LukeDavis734"
